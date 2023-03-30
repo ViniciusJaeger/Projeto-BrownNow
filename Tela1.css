@@ -12,18 +12,13 @@
     background-color: #392620;
     padding: 75px;
     font-size: 25px;
-    color: white
-
-    
+    color: white;
+ 
 }
 
-.Conteudo{
-    height: 150px;
-    width: 200px;
-}
 
 .Rodape{
     padding: 20%;
-    align-items: baseline;
+
 }
 
