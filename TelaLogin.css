@@ -1,0 +1,94 @@
+body{
+    background-color: #E8E5E0;
+    font-family: "Inter", sans-serif;
+    margin: 60px;
+    padding: 0;
+    
+
+}
+
+.caixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #E8E5E0;
+
+}
+
+.formlogin{
+    display: flex;
+    flex-direction: column;
+    background-color: #544541;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgb(0,0,0,0.4);
+    gap: 5px;
+
+}
+
+.formlogin h1{
+    padding: 0;
+    margin: 0;
+    font-weight: 500px;
+    font-size: 2.3em;
+}
+
+.formlogin p{
+    display: inline-block;
+    font-size: 14px;
+    color: #E8E5E0;
+    margin-bottom: 25px;
+}
+
+.formlogin input{
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+.formlogin input:focus{
+    border: 1px solid  #544541;
+}
+
+.formlogin label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #E8E5E0;
+}
+
+.formlogin a{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #E8E5E0;
+    transition: all linear 160ms;
+    
+}
+
+.formlogin a:hover{
+    color: #E8E5E0;
+}
+
+.acesso{
+    background-color: #E8E5E0;
+    color: #171017;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+.acesso:hover{
+    transform: scale(1.05);
+    background-color: #544541;
+}
