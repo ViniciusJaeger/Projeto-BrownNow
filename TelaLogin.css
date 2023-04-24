@@ -29,11 +29,9 @@ body{
 
 }
 
-.formlogin h1{
-    padding: 0;
-    margin: 0;
-    font-weight: 500px;
-    font-size: 2.3em;
+.formlogin img{
+   width: 100%;
+   height: 20vh;
 }
 
 .formlogin p{
