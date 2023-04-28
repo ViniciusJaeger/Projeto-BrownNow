@@ -15,7 +15,7 @@ body{
 
 .logo{
     padding: 1px;
-    width: 300px;
+    width: 22.4%;
     height: 149px;
     display: flex;
     justify-content: center;
@@ -28,7 +28,9 @@ body{
 }
 
 .busca{
-    width: 350px;
+    display: flex;
+    justify-content: center;
+    width: 26%;
 }
 .busca input{
     border-radius: 15px;
@@ -40,7 +42,7 @@ body{
 }
 
 .options{
-    width: 430px;
+    width: 32%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -52,7 +54,7 @@ body{
 }
 
 .options ul li{
-    margin-right: 50px;
+    margin-right: 70px;
 }
 
 .lista a{
@@ -61,7 +63,8 @@ body{
 }
 
 .lista a:hover{
-    text-decoration: underline;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #FFFFFF;
     padding: 7px;
 }
 
@@ -69,8 +72,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90px;
-    padding: 15px;
+    width: 8%;
+    padding: 10px;
 }
 
 
@@ -78,15 +81,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    padding: 15px;
+    width: 8%;
+    padding: 10px;
 }
 
 .imagecl{
-    height: 50px;
-    width: 50px;
-    padding: 3px
+    height: 60px;
+    width: 60px;
+    padding: 10px;
 }
+
 
 section{
     margin: 8px;
@@ -94,31 +98,41 @@ section{
 
 .texto h1{
     margin-left: 30px;
-    font-size: 52px;
+    font-size: 45px;
     text-shadow: 0px 1px 1px #3D2F2B;
     
 }
 
 .texto p{
     width: 700px;
-    font-size: 16px;
+    font-size:18px;
     margin-left: 5px;
     font-style: italic;
     color: #3D2F2C
 }
 
 .conteudo{
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .banner{
-    align-self: center;
+   justify-content: center;
+   align-items: center;
 }
 
 .banner img{
-    width: 542px;
-    height: 328px;
+    width: 550px;
+    padding: 30px;
+    object-fit: contain;
+}
+
+.bannerimg{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 
