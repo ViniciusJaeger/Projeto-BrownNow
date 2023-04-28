@@ -91,13 +91,48 @@ body{
     padding: 10px;
 }
 
-.imagemca{
-    width: 1200px;
-    background-color: red;
+
+section{
+    margin: 8px;
 }
 
-.imagens{
-    background-color: green;
-    width: 20%;
+.texto h1{
+    margin-left: 30px;
+    font-size: 45px;
+    text-shadow: 0px 1px 1px #3D2F2B;
+    
 }
+
+.texto p{
+    width: 700px;
+    font-size:18px;
+    margin-left: 5px;
+    font-style: italic;
+    color: #3D2F2C
+}
+
+.conteudo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner{
+   justify-content: center;
+   align-items: center;
+}
+
+.banner img{
+    width: 550px;
+    padding: 30px;
+    object-fit: contain;
+}
+
+.bannerimg{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
 
