@@ -42,7 +42,7 @@ body{
 }
 
 .options{
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -102,21 +102,19 @@ body{
 }
 
 .carrossel {
-    margin: 0;
-    padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 400px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .slider {
     margin: 0 auto;
-    width: 1000px;
+    width: 100%;
     height: 400px;
     overflow: hidden;
-    margin-top: -190px;
+    margin-top: 0;
 }
 
 .slides {
@@ -135,17 +133,16 @@ body{
 }
 
 .slide img {
-    width: 1000px;
-    border-radius: 10px;
-    margin-top: 20px;
+    width: 100%;
+    height: 400px;
 }
 
 .manual-navigation {
     position: absolute;
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .manual-btn {
@@ -182,4 +179,37 @@ body{
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
+}
+
+.produtos{
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.produtos1{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000100;
+    border-radius: 15px;
+    background-color: green;
+}
+
+.produtos2{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000100;
+    border-radius: 15px;
+    background-color: blue;
+}
+
+.produtos3{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000100;
+    border-radius: 15px;
+    background-color: brown;
 }
