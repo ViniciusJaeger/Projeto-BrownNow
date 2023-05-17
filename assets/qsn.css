@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #E8E5E0;
+    background-color: #6f5647;
 }
 
 .navbar{
@@ -140,31 +140,26 @@ body{
 
 }
 
-section{
-    margin: 8px;
-}
-
 .texto{
     display: flex;
     flex-direction: column;
-    margin-left: 70px;
+    margin-left: 30px;
 }
 
 .texto h1{
     margin-top: 15px;
-    margin-left: 25px;
-    font-size: 45px;
+    margin-left: 35px;
+    font-size: 40px;
     text-shadow: 0px 1px 1px #3D2F2B;
     
 }
 
 .texto p{
     width: 800px;
-    font-size:18px;
+    font-size:16px;
     margin-top: 20px;
-    margin-left: 5px;
     font-style: italic;
-    color: #3D2F2C
+    color: #FFF;
 }
 
 .conteudo{
@@ -179,7 +174,7 @@ section{
 }
 
 .banner img{
-    width: 500px;
+    width: 440px;
     padding: 30px;
     object-fit: contain;
 }
@@ -190,6 +185,21 @@ section{
     justify-content: center;
     align-items: center;
 }
+
+.info{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    background-color: red;
+}
+
+.info_area_1{
+    width: 100%;
+    height: auto;
+    background-color: blue;
+}
+
+
 
 
 
