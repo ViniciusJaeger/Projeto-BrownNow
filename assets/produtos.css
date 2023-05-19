@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #E8E5E0;
+    background-color: #6f5647;
     height: 100vh;
     width: 100%;
 }
@@ -150,6 +150,7 @@ body {
     gap: 30px;
     margin-top: 3%;
     flex: 1;
+
 }
 
 .product-item {
@@ -208,11 +209,16 @@ option {
     font-size: 14px;
 }
 
-.texto2 h1{
-    text-align: center;
-    margin-top: 50px;
+.texto2{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.texto2 select{
-    
+.texto2 h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
