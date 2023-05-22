@@ -1,86 +1,241 @@
-*{
+* {
     font-family: 'Montserrat';
-}
-body{
     margin: 0;
     padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #E8E5E0;
+    height: 100vh;
+    width: 100%;
 }
 
-.container{
+.navbar {
     background-color: #3D2F2B;
-    display: flex;
     height: 150px;
 }
 
-.logo{
-    padding: 1px;
-    width: 22.4%;
-    height: 149px;
+.logo-pesquisa {
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+
+.logo {
+    width: 180px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.logo img {
+    width: 180px;
+    height: 105px;
+}
+
+.logo-pesquisa .pesquisa {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.logo-pesquisa .pesquisa input {
+    height: 30px;
+    width: 200px;
+    padding: 15px;
+    background-color: #3D2F2B;
+}
+
+.logo-pesquisa .pesquisa label {
+    margin-right: 20px;
+    padding-bottom: 9px;
+    width: 200px;
+    border-bottom: 2px solid #FFF;
+    background-color: #3D2F2B;
+
+}
+
+.logo-pesquisa .pesquisa input::placeholder {
+    color: #FFF;
+    background-color: #3D2F2B;
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background-color: #FFF;
+}
+
+.options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45px;
+    width: 750px;
+}
+
+.car-conta {
+    height: 45px;
+    width: 750px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.conta {
+    height: 45px;
+    margin-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imagem{
-    width: 278px;
-    height: 150px;
-}
-
-.busca{
-    display: flex;
-    justify-content: center;
-    width: 26%;
-}
-.busca input{
-    border-radius: 15px;
-    border: 1px solid black;
-    margin-top: 90px;
-    width: 290px;
-    height: 20px;
-    padding: 5px;
-}
-
-.options{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.options ul{
-    display: flex;
-    list-style-type: none;
-}
-
-.options ul li{
-    margin-right: 70px;
-}
-
-.lista a{
+.conta a {
     text-decoration: none;
-    color: #F6F3EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: #000;
 }
 
-.lista a:hover{
-    margin-bottom: 4px;
-    border-bottom: 1px solid #FFFFFF;
-    padding: 7px;
+.conta img {
+    margin-right: 10px;
+    height: 25px;
+    overflow: cover;
 }
 
-.carrinho{
+.car {
+    height: 45px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.car img {
+    height: 30px;
+    overflow: cover;
+}
+
+.menu .options ul,
+.menu .options li {
+    display: flex;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.menu .options li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.container {
+    height: calc(100% - 150px);
+    width: 100%;
+    display: flex;
+}
+
+.produtos {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto1 {
+    height: 150px;
+    width: 70%;
+    background-color: beige;
+    border: #3D2F2B solid 3px;
+    border-radius: 30px;
+    display: flex;
+}
+
+.produto2 {
+    height: 150px;
+    width: 70%;
+    background-color: beige;
+    border: #3D2F2B solid 3px;
+    border-radius: 30px;
+}
+
+.texto {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    width: 50%;
+    height: 100%;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.total p {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 8%;
-    padding: 10px;
 }
 
-
-.conta{
+.botoes {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#meu-botao {
+    background-color: #3D2F2C;
+    color: #AA8C85;
+    padding: 15px 15px;
+    width: 20%;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    /* Outras configurações de estilo que você desejar */
+}
+
+span{
+    width: 30%;
+    height: 100%;
+    display: flex;
     align-items: center;
-    width: 8%;
-    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+span img{
+    height: 90%;
+    width: 100%;
+    border: #3D2F2B solid 2px;
+    border-radius: 30px;
+}
+
+.produto1 p{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    width: 65%;
 }
