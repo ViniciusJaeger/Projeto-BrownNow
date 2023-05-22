@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #6f5647;
+    background-color: #E8E5E0;
 }
 
 .navbar{
@@ -159,7 +159,7 @@ body{
     font-size:16px;
     margin-top: 20px;
     font-style: italic;
-    color: #FFF;
+    color: #000;
 }
 
 .conteudo{
