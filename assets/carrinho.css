@@ -173,6 +173,7 @@ body {
     background-color: beige;
     border: #3D2F2B solid 3px;
     border-radius: 30px;
+    display: flex;
 }
 
 .texto {
@@ -217,7 +218,7 @@ body {
     /* Outras configurações de estilo que você desejar */
 }
 
-span{
+span {
     width: 30%;
     height: 100%;
     display: flex;
@@ -226,16 +227,43 @@ span{
     cursor: pointer;
 }
 
-span img{
+span img {
     height: 90%;
     width: 100%;
     border: #3D2F2B solid 2px;
     border-radius: 30px;
 }
 
-.produto1 p{
+.produto1 p {
     display: flex;
     margin-top: 10px;
     justify-content: center;
     width: 65%;
+    height: 100%;
+}
+
+.numeros {
+    width: 20%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.numeros input {
+    width: 60%;
+    height: 20%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #D9D9D9;
+}
+
+.produto2 p {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    width: 65%;
+    height: 100%;
 }
