@@ -39,12 +39,19 @@ section{
     height: calc(100% - 100px);
 }
 
-.container{
+.titulo{
     width: 100%;
+    height: 70px;
+    padding: 20px;
+}
+
+.container{
+    max-width: 1900px;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: 40px;
 }
 
 .donate1{
@@ -52,12 +59,12 @@ section{
     height: 300px;
     display: flex;
     padding: 10px;
-    margin: 30px 0px;
+    margin: 20px 0px;
 }
 
 .container .donate1 .imagem{
     height: 100%;
-    width: 250px;
+    width: 300px;
     border: 1px solid #000;
 }
 
@@ -67,7 +74,7 @@ section{
 }
 
 .donate2{
-    width: 600px;
+    width: 700px;
     height: 300px;
     display: flex;
     padding: 10px;
@@ -87,13 +94,25 @@ section{
 
 .donate1 .title_select, .donate2 .title_select{
     display: flex;
+    width: 400px;
     justify-content: center;
     align-items: center;
-    flex: 1;
+
 }
 
-.donate1 .title, .donate2 .title{
+.donate2 .title{
     display: flex;
+    width: 250px;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate1 .title{
+    display: flex;
+    width: 200px;
+    text-align: center;
     justify-content: center;
     align-items: center;
     flex: 1;
@@ -134,4 +153,36 @@ section{
     height: 20px;
     width: 20px;
   }
+
+.pagamento{
+    width: 575px;
+    height: 280px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 25px;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.pagamento .button{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    height: 40px;
+    background-color: #3D2F2B;
+    border-radius: 15px;
+}
+
+.pagamento span{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+
   
