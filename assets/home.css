@@ -146,7 +146,7 @@ body{
     background-color: red;
 }
 
-.imagens{
+.imagem{
     background-color: green;
     width: 20%;
 }
@@ -267,3 +267,145 @@ body{
     border-radius: 15px;
     background-color: brown;
 }
+
+.promocoes{
+    width: 100%;
+    height: 220px;
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.imagemp{
+    width: 1140px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imagemp a img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: blue;
+}
+
+.rodape{
+    width: 100%;
+    height: 150px;
+    background-color: #3D2F2B;
+    display: flex;
+    align-items: center;
+}
+
+.number{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    margin-left: 50px;
+}
+
+
+.text1{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text1 h1{
+    font-size: 25px;
+    color: #FFF;
+}
+
+.text2 p{
+    color: #FFF;
+}
+
+.text2{
+    flex: 1;
+    font-weight: bold;
+}
+
+.social{
+    display: flex;
+    width: 500px;
+    height: 120px;
+    margin-left: 100px;
+}
+
+.social .text{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social .text h1{
+    font-size: 25px;
+    color: #FFF;
+}
+
+
+.social-img{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.social-img span{
+    color: #FFFF
+}
+
+
+
+.social .social1{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.social .social2{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.social .social1 img{
+    width: 50px;
+    height: 50px;
+
+    margin-right: 15px;
+}
+
+.social .social1 a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social .social2 a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social .social2 img{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.rodape .logo{
+    margin-left: 70px;
+}
+
+
