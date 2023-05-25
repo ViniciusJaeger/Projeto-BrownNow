@@ -1,19 +1,20 @@
-*{
+* {
     font-family: 'Montserrat';
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     background-color: #E8E5E0;
 }
 
-.container{
+.container {
     background-color: #3D2F2B;
     display: flex;
     height: 150px;
 }
 
-.logo{
+.logo {
     padding: 1px;
     width: 22.4%;
     height: 149px;
@@ -22,17 +23,18 @@ body{
     align-items: center;
 }
 
-.imagem{
+.imagem {
     width: 278px;
     height: 150px;
 }
 
-.busca{
+.busca {
     display: flex;
     justify-content: center;
     width: 26%;
 }
-.busca input{
+
+.busca input {
     border-radius: 15px;
     border: 1px solid black;
     margin-top: 90px;
@@ -41,43 +43,47 @@ body{
     padding: 5px;
 }
 
-.options{
+.options {
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
 }
 
-.options ul{
+.options ul {
     display: flex;
     list-style-type: none;
 }
 
-.options ul li{
+.options ul li {
     margin-right: 70px;
 }
 
-.lista a{
+
+
+.lista a {
     text-decoration: none;
     color: #F6F3EE;
 }
 
-.lista a:hover{
+.lista a:hover {
     margin-bottom: 4px;
     border-bottom: 1px solid #FFFFFF;
-    padding: 7px;
+
+
 }
 
-.carrinho{
+.carrinho {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 8%;
-    padding: 10px;
+    padding: 15px;
 }
 
 
-.conta{
+.conta {
     display: flex;
     justify-content: center;
     align-items: center;
