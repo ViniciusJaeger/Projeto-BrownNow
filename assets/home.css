@@ -273,7 +273,9 @@ body{
     height: 220px;
     margin: 40px 0px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .imagemp{
@@ -282,6 +284,13 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: all 0.5s;
+}
+
+.imagemp a:hover{
+    transform: scale(1.3);
+    transition: all 0.4s;
+    z-index: 10;
 }
 
 .imagemp a img{
@@ -291,12 +300,17 @@ body{
     background-color: blue;
 }
 
+.imagemp a img:hover{
+    box-shadow: 10px 10px 10px lightgray;
+}
+
 .rodape{
     width: 100%;
-    height: 150px;
+    height: auto;
     background-color: #3D2F2B;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .number{
@@ -336,26 +350,11 @@ body{
     margin-left: 100px;
 }
 
-.social .text{
-    height: 100%;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social .text h1{
-    font-size: 25px;
-    color: #FFF;
-}
-
-
 .social-img{
-    flex: 1;
+    flex-direction: row;
+    width: 500px;
     margin-left: 40px;
     display: flex;
-    flex-direction: column;
-
 }
 
 .social-img span{
@@ -364,48 +363,36 @@ body{
 
 
 
-.social .social1{
+.social .social1, .social .social2{
     height: 50px;
-    width: 100%;
+    width: 75px;
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.social .social2{
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
+.social .social1 img, .social .social2 img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
 }
 
-.social .social1 img{
-    width: 50px;
-    height: 50px;
-
-    margin-right: 15px;
-}
-
-.social .social1 a{
+.social .social1 a, .social .social2 a{
     display: flex;
     align-items: center;
     text-decoration: none;
-}
-
-.social .social2 a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.social .social2 img{
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
 }
 
 .rodape .logo{
     margin-left: 70px;
+}
+
+.rodape--right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 90px;
+
 }
 
 
