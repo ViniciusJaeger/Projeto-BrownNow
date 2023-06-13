@@ -57,6 +57,11 @@ function openPopup(product) {
           closePopup();
         }
       }
+
+      function goToPurchasePage() {
+        // Redirecionar para a página de compra do produto
+        window.location.href = "pagina_compra.html";
+      }
   }
 
   

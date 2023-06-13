@@ -94,15 +94,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.conta a{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    color: #000;
+    cursor: pointer;
 }
 
 .conta img{
@@ -259,6 +251,8 @@ body{
     box-shadow: 10px 10px 10px lightgray;
 }
 
+/* Rodape */
+
 .rodape{
     width: 100%;
     height: auto;
@@ -316,8 +310,6 @@ body{
     color: #FFFF
 }
 
-
-
 .social .social1, .social .social2{
     height: 50px;
     width: 75px;
@@ -349,5 +341,3 @@ body{
     margin-left: 90px;
 
 }
-
-

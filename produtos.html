@@ -56,29 +56,42 @@
             </div>
 
     </header>
-    <section>
+    <section >
+        <div class="produtosall">
+      <div class="selection">
+      <select id="filter-select" onchange="filterProducts()">
+        <option value="all">Todos</option>
+        <option value="best-sellers">Mais vendidos</option>
+        <option value="lowest-price">Menor preço</option>
+        <option value="top-rated">Mais bem avaliados</option>
+        <option value="promotions">Promoções</option>
+      </select>
+    </div>
+    </div>
 
     <div class="container">
 
-        <div class="product" onclick="openPopup('produto1')">
+    
+
+        <div class="product" onclick="openPopup('produto1')" data-category="lowest-price">
             <img class="product-image" src="images/brownie.png" alt="Produto1">
             <div class="product-name">Produto 1</div>
             <div class="product-price">R$ 10,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto2')">
+          <div class="product" onclick="openPopup('produto2')" data-category="best-sellers">
             <img class="product-image" src="images/brownie2.png" alt="Produto 2">
             <div class="product-name">Produto 2</div>
             <div class="product-price">R$ 15,00</div>
           </div>
         
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto3')" data-category="top-rated">
             <img class="product-image" src="images/brownie3.png" alt="Produto 3">
             <div class="product-name">Produto 3</div>
             <div class="product-price">R$ 20,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto3')" data-category="promotions">
             <img class="product-image" src="images/brownie4.png" alt="Produto 3">
             <div class="product-name">Produto 3</div>
             <div class="product-price">R$ 20,00</div>
@@ -140,11 +153,51 @@
               <p id="popup-price"></p>
               <h3>Fotos adicionais:</h3>
               <div id="popup-gallery"></div>
+              <button class="buy-button" onclick="goToPurchasePage()">Comprar</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
+
+      </div>
+
           <script src="produtos.js"></script>
+          <script src="produtosfilter.js"></script>
+
     </section>
+
+    <footer>
+      <div class="rodape">
+          <div class="logo">
+              <img src="images/logo.png" alt="">
+          </div>
+          <div class="rodape--right">
+          <div class="number">
+          <div class="text1">
+              <h1>Contato:</h1>
+          </div>
+          <div class="text2">
+              <p>0800-80909</p>
+          </div>
+          </div>
+          <div class="social">
+              <div class="social-img">
+                  <div class="social1">
+              <a href="">
+                  <img src="images/insta.png" alt="">
+                  
+              </a>
+                  </div>
+                  <div class="social2">
+                      <a href="">
+                      <img src="images/facebook.png" alt="">
+                  </a>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </footer>
 </body>
 
 </html>
