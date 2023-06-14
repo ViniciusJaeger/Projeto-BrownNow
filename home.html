@@ -22,6 +22,7 @@
                         <input type="search" placeholder="O que você deseja?">
                     </label>
                 </div>
+                </div>
             </div>
             <div class="menu">
             <div class="options">
@@ -42,6 +43,27 @@
             </div>
             
             </div>
+
+            <div id="popup" class="popup" style="display: none">
+            <div class="caixa" onclick=openpopup()>
+                <span class="close" onclick="closePopup()">x</span>
+                <form role="form" class="formlogin">
+                    <img src="images/logo.png" class="imagemlogin">
+            
+               
+                    <label for="emailusuario"> Email:</label>
+                    <input class="emailusuario" id="loginusuario" type="email" aria-label="Digite seu email" placeholder="Digite seu email" autofocus="true">
+                    <label for="senhausuario"> Senha:</label>
+                    <input class="senhausuario" id="login usuario" type="password" aria-label="senha" placeholder="Insira sua senha">
+                    <a href="action.php" class="Senha">Esqueci minha senha</a>
+                    <input type="submit" value="Entrar" class="acesso">
+                    <p><strong>Não possui cadastro?</strong>
+                    <a href="Paginacadastro.html">Cadastre-se agora</a>
+                    </p>
+                </form>
+            
+            </div>
+            </div>
             
         </div>
         </div>
@@ -56,8 +78,6 @@
                     <div class="carrossel-seta left">&#10094;</div>
                     <div class="carrossel-seta right">&#10095;</div>
             </div>
-            <script src="carrosel.js"></script>
-        </div>
         <div class="promocoes">
             <div class="imagemp">
                 <a href=""><img src="" alt=""></a>
@@ -111,5 +131,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="carrosel.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
