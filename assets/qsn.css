@@ -143,6 +143,7 @@ body{
 .texto{
     display: flex;
     flex-direction: column;
+    text-align: justify;
     margin-left: 30px;
 }
 

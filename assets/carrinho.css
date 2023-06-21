@@ -1,32 +1,26 @@
-* {
+*{
     font-family: 'Montserrat';
-}
-
-body {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
-
-body {
+body{
     background-color: #E8E5E0;
-    height: 100vh;
-    width: 100%;
 }
 
-.navbar {
+.navbar{
     background-color: #3D2F2B;
     height: 150px;
 }
 
-.logo-pesquisa {
+.logo-pesquisa{
     width: 100%;
     height: 70%;
     display: flex;
 }
 
-.logo {
+.logo{
     width: 180px;
     height: 105px;
     display: flex;
@@ -35,26 +29,26 @@ body {
     margin-left: 25px;
 }
 
-.logo img {
+.logo img{
     width: 180px;
     height: 105px;
 }
 
-.logo-pesquisa .pesquisa {
+.logo-pesquisa .pesquisa{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex: 1;
 }
 
-.logo-pesquisa .pesquisa input {
+.logo-pesquisa .pesquisa input{
     height: 30px;
     width: 200px;
     padding: 15px;
     background-color: #3D2F2B;
 }
 
-.logo-pesquisa .pesquisa label {
+.logo-pesquisa .pesquisa label{
     margin-right: 20px;
     padding-bottom: 9px;
     width: 200px;
@@ -63,14 +57,14 @@ body {
 
 }
 
-.logo-pesquisa .pesquisa input::placeholder {
+.logo-pesquisa .pesquisa input::placeholder{
     color: #FFF;
     background-color: #3D2F2B;
 }
 
 
 
-.menu {
+.menu{
     display: flex;
     align-items: center;
     width: 100%;
@@ -78,7 +72,7 @@ body {
     background-color: #FFF;
 }
 
-.options {
+.options{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -86,15 +80,15 @@ body {
     width: 750px;
 }
 
-.car-conta {
+.car-conta{
     height: 45px;
     width: 750px;
     display: flex;
     justify-content: flex-end;
-
+    
 }
 
-.conta {
+.conta{
     height: 45px;
     margin-right: 20px;
     display: flex;
@@ -102,7 +96,7 @@ body {
     align-items: center;
 }
 
-.conta a {
+.conta a{
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -111,186 +105,37 @@ body {
     color: #000;
 }
 
-.conta img {
+.conta img{
     margin-right: 10px;
     height: 25px;
     overflow: cover;
 }
 
-.car {
+.car{
     height: 45px;
     width: 50px;
     display: flex;
     align-items: center;
-
+    
 }
 
-.car img {
+.car img{
     height: 30px;
     overflow: cover;
 }
 
-.menu .options ul,
-.menu .options li {
+.menu .options ul, .menu .options li{
     display: flex;
     list-style: none;
     margin-left: 50px;
 }
 
-.menu .options li a {
+.menu .options li a{
     display: block;
     color: #000;
     text-decoration: none;
     padding-left: 10px;
     text-transform: uppercase;
     font-weight: 500;
-}
 
-.container {
-    height: calc(100% - 150px);
-    width: 100%;
-    display: flex;
-}
-
-.produtos {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-}
-
-.produto1 {
-    height: 150px;
-    width: 70%;
-    background-color: beige;
-    border: #3D2F2B solid 3px;
-    border-radius: 30px;
-    display: flex;
-}
-
-.produto2 {
-    height: 150px;
-    width: 70%;
-    background-color: beige;
-    border: #3D2F2B solid 3px;
-    border-radius: 30px;
-    display: flex;
-}
-
-.texto {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 30px;
-    width: 50%;
-    height: 100%;
-}
-
-.total {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.total p {
-    display: flex;
-    justify-content: center;
-}
-
-.botoes {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin-right: 10px;
-}
-
-#meu-botao {
-    background-color: #3D2F2C;
-    color: #AA8C85;
-    padding: 15px 15px;
-    width: 20%;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 40px;
-    border-radius: 30px;
-    /* Outras configurações de estilo que você desejar */
-}
-
-span {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-span img {
-    height: 90%;
-    width: 100%;
-    border: #3D2F2B solid 2px;
-    border-radius: 30px;
-    display: flex;
-}
-
-.produto1 p {
-    display: inline-flex;
-    height: 60%;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.produto2 p {
-    display: inline-flex;
-    height: 60%;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.numeros {
-    width: 20%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.numeros input {
-    width: 60%;
-    height: 20%;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background-color: #D9D9D9;
-}
-
-.produto1 a {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-
-.produto2 a {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-}
-
-.spantexto {
-    width: 100%;
-    height: 100%;
-}
-
-.spantexto a {
-    text-decoration: none;
-    color: #000;
 }
