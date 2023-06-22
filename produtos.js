@@ -1,3 +1,5 @@
+
+
 function openPopup(product) {
     var popup = document.getElementById("popup");
     var popupImage = document.getElementById("popup-image");
@@ -57,11 +59,4 @@ function openPopup(product) {
           closePopup();
         }
       }
-
-      function goToPurchasePage() {
-        // Redirecionar para a página de compra do produto
-        window.location.href = "pagina_compra.html";
-      }
-  }
-
-  
+    }
