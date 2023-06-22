@@ -95,13 +95,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .conta img{
     margin-right: 10px;
     height: 25px;
     overflow: cover;
+}
+
+.conta a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    align-items: center;
 }
 
 /* login */
