@@ -125,11 +125,18 @@ section{
     position: relative;
     align-items: center;
     justify-content: center;
+    flex-direction: row-reverse;
 }
 
-.select input[type='radio'] {
-    display: none;
-  }
+
+
+.select input[type='radio']:checked + label::before{
+    color: #8e44ad;
+    content: "✓";
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 10px;
+}
 
 .select label,  .select label::before{
     cursor: pointer;
@@ -155,6 +162,23 @@ section{
     justify-content: flex-end;
     flex-direction: column;
 }
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.2s;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]::after {
+    background-image: url('/images/verifica.png');
+  }
 
 .pagamento .button{
     width: 100px;
