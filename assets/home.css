@@ -398,48 +398,48 @@ body{
     display: flex;
     align-items: flex-start;
     color: #ccc;
-    
 }
 
 .rodape--container{
-    width:500px;
+    width:700px;
     height: auto;
     display: grid;
     grid-column: 1 / 1;
     grid-row: 1 / 2;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 30px;
 }
 
 .rodape--below{
     width: 100%;
     height: auto;
     display: flex;
+    margin-bottom: 30px;
 }
-
 
 .number{
     display: flex;
+    width: 250px;
     align-items: center;
-    margin-bottom: 30px;
+    margin-right: 20px;
 }
 
 .number .text1{
     margin-right: 20px;
+    font-size: 14px;
 }
 
 .social{
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    align-items: center;
+    width: 200px;
     height: auto;
-    margin-bottom: 30px;
-    flex-direction: row;
 }
 
-
 .social img{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .social--3 img{
