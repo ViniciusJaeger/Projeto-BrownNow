@@ -1,3 +1,12 @@
+:root{
+    --fb-blue: #3b5998;
+    --insta-pink: #c13584;
+    --link-blue: #0e76a8;
+}
+
+
+
+
 *{
     font-family: 'Montserrat';
     margin: 0;
@@ -226,12 +235,6 @@ body{
 
 /* //login// */
 
-/* Cadastro */
-
-
-
-
-
 /* // cadastro // */
 
 
@@ -391,61 +394,6 @@ body{
 
 /* Rodape */
 
-.rodape{
-    width: 100%;
-    height: auto;
-    background-color: #544541;
-    display: flex;
-    align-items: flex-start;
-    color: #ccc;
-}
-
-.rodape--container{
-    width:700px;
-    height: auto;
-    display: grid;
-    grid-column: 1 / 1;
-    grid-row: 1 / 2;
-    justify-content: flex-start;
-    margin-left: 30px;
-}
-
-.rodape--below{
-    width: 100%;
-    height: auto;
-    display: flex;
-    margin-bottom: 30px;
-}
-
-.number{
-    display: flex;
-    width: 250px;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.number .text1{
-    margin-right: 20px;
-    font-size: 14px;
-}
-
-.social{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 200px;
-    height: auto;
-}
-
-.social img{
-    width: 30px;
-    height: 30px;
-}
-
-.social--3 img{
-    border-radius: 50%;
-}
-
 
 
 
@@ -476,6 +424,8 @@ body{
     cursor: pointer;
     font-size: 20px;
   }
+
+
 
 
 
