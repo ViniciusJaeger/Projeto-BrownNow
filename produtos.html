@@ -37,8 +37,6 @@
 
     <div class="container">
 
-    
-
         <div class="product" onclick="openPopup('produto1')" data-category="lowest-price">
             <img class="product-image" src="images/browniehd.jpg" alt="Produto1">
             <div class="product-name">Brownie de Castanha</div>
@@ -57,73 +55,72 @@
             <div class="product-price">R$ 20,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')" data-category="promotions">
+          <div class="product" onclick="openPopup('produto4')" data-category="promotions">
             <img class="product-image" src="images/brownie4.png" alt="Produto 3">
             <div class="product-name">Brownie Amendoim Elegante</div>
-            <div class="product-price">R$ 20,00</div>
+            <div class="product-price">R$ 15,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto5')">
             <img class="product-image" src="images/brownie5.png" alt="Produto 3">
             <div class="product-name">Brownie Amendoim Refinado</div>
-            <div class="product-price">R$ 20,00</div>
+            <div class="product-price">R$ 25,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto6')">
             <img class="product-image" src="images/brownie6.png" alt="Produto 3">
             <div class="product-name">Brownie Amendoim Clássico</div>
             <div class="product-price">R$ 20,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
-            <img class="product-image" src="images/brownie7.png" alt="Produto 3">
+          <div class="product" onclick="openPopup('produto7')">
+            <img class="product-image" src="images/brownie8.png" alt="Produto 3">
             <div class="product-name">Brownie de Maracujá Gourmet</div>
-            <div class="product-price">R$ 20,00</div>
+            <div class="product-price">R$ 30,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
-            <img class="product-image" src="images/brownie8.png" alt="Produto 3">
+          <div class="product" onclick="openPopup('produto8')">
+            <img class="product-image" src="images/brownie7.png" alt="Produto 3">
             <div class="product-name">Brownie de Maracujá Maravilha</div>
             <div class="product-price">R$ 20,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto9')">
             <img class="product-image" src="images/brownie9.png" alt="Produto 3">
             <div class="product-name">Brownie de Maracujá Fresco</div>
             <div class="product-price">R$ 20,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto10')">
             <img class="product-image" src="images/brownie10.png" alt="Produto 3">
             <div class="product-name">Brownie de Frutas Silvestres</div>
             <div class="product-price">R$ 20,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto11')">
             <img class="product-image" src="images/brownie11.png" alt="Produto 3">
             <div class="product-name">Brownie de Amendoim com Frutas Vermelhas</div>
-            <div class="product-price">R$ 20,00</div>
+            <div class="product-price">R$ 25,00</div>
           </div>
 
-          <div class="product" onclick="openPopup('produto3')">
+          <div class="product" onclick="openPopup('produto12')">
             <img class="product-image" src="images/brownie12.png" alt="Produto 3">
-            <div class="product-name">Brownie Vermelho Fruity</div>
-            <div class="product-price">R$ 20,00</div>
+            <div class="product-name">Brownie Red Velvet</div>
+            <div class="product-price">R$ 30,00</div>
           </div>
         
           <div class="popup" id="popup">
             <div class="popup-content">
-              <span class="close" onclick="closePopup()">x</span>
-              <img id="popup-image" src="" alt="">
+              <span class="close" onclick="closePopup()">&times;</span>
               <h2 id="popup-name"></h2>
               <p id="popup-price"></p>
-              <h3>Fotos adicionais:</h3>
-              <div id="popup-gallery"></div>
-              <button class="buy-button" onclick="goToPurchasePage()">Comprar</button>
-              <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+              <p id="popup-description"></p>
+              <div class="buttons">
+                <button class="buy-button" onclick="goToPurchasePage()">Comprar</button>
+                <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+              </div>
             </div>
           </div>
-        </div>
 
       </div>
 
