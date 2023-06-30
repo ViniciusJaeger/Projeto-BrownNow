@@ -107,3 +107,31 @@ function openPopup(product) {
     popup.style.opacity = 0;
 
     }
+
+
+
+    function addToCart() {
+      // Obtenha as informações do produto selecionado
+      var product = document.querySelector('.product');
+      var productName = product.querySelector('.product-name').innerHTML;
+      var productPrice = product.querySelector('.product-price').innerHTML;
+      var productImage = product.querySelector('.product-image').src;
+      
+     
+    
+      // Crie um novo item de carrinho com as informações do produto
+      var item = document.createElement('div');
+      item.classList.add('cart-item');
+      item.innerHTML = `
+        <div class="cart-product">${productName}</div>
+        <img src="${productImage}" style='widht: 100px; height:100px; align-self: center;'>
+        <div class="cart-price">${productPrice}</div>
+      `;
+    
+      // Adicione o item ao carrinho
+      var cart = document.querySelector('#carrinho');
+      cart.appendChild(item);
+    
+      // Feche o pop-up
+      closePopup();
+    }

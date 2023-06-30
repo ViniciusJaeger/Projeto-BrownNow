@@ -25,7 +25,7 @@ class footer extends HTMLElement {
             grid-row: 1 / 2;
             justify-content: flex-start;
             margin-left: 30px;
-            margin-right: 210px;
+            margin-right: 300px;
         }
         
         .rodape--below{
