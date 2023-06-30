@@ -142,7 +142,7 @@ class Header extends HTMLElement {
     <div class="navbar">
         <div class="logo-pesquisa">
             <div class="logo">
-                <img src="images/logo.png" alt="">
+                <a href="home.html"><img src="images/logo.png" alt=""></a>
             </div>
             <div class="pesquisa">
                 <label for="pesquisa">
