@@ -10,6 +10,7 @@ body {
     background-color: #E8E5E0;
 }
 
+/* navbar da pagina */
 .navbar {
     background-color: #3D2F2B;
     height: 100px;
@@ -34,7 +35,23 @@ body {
     width: 180px;
     height: 105px;
 }
+/* css dos pontos ilustrativos */
+.pontos {
+    margin-left: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    text-transform: uppercase;
+}
 
+.pontos h1 {
+    font-size: 25px;
+    margin: 10px 0px;
+}
+
+/* calculo tamanho da section */
 section {
     width: 100%;
     height: calc(100% - 100px);
@@ -46,6 +63,7 @@ section {
     padding: 20px;
 }
 
+/* div geral do conteudo */
 .container {
     max-width: 1900px;
     height: 100%;
@@ -55,6 +73,7 @@ section {
     margin-left: 40px;
 }
 
+/* div que contempla as imagens e nome */
 .donate {
     width: 600px;
     height: 300px;
@@ -63,6 +82,7 @@ section {
     margin: 20px 0px;
 }
 
+/* css da imagem */
 .container .donate .imagem {
     height: 100%;
     width: 300px;
@@ -90,6 +110,7 @@ section {
     flex: 1;
 }
 
+/* css do seletor */
 .donate .select {
     flex: 1;
     display: flex;
@@ -100,6 +121,7 @@ section {
     flex-direction: row-reverse;
 }
 
+/* acao do seletor */
 .select label,
 .select label::before {
     cursor: pointer;
@@ -108,7 +130,7 @@ section {
     vertical-align: middle;
 }
 
-
+/* area do pagamento */
 .pagamento {
     width: 575px;
     height: 280px;
@@ -132,10 +154,12 @@ input[type="radio"] {
     cursor: pointer;
 }
 
+/* aciona após o clique */
 input[type="radio"]::after {
     background-image: url('/images/verifica.png');
 }
 
+/* css do botao de pagamento */
 .pagamento .button {
     width: 100px;
     display: flex;
@@ -150,27 +174,15 @@ input[type="radio"]::after {
     border-radius: 15px;
 }
 
+
+/* css ilustrativo do preco */
 .pagamento span {
     width: 100px;
     height: 40px;
     text-align: center;
 }
 
-.pontos {
-    margin-left: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #FFF;
-    text-transform: uppercase;
-}
-
-.pontos h1 {
-    font-size: 25px;
-    margin: 10px 0px;
-}
-
+/* css do select */
 .select input[type="radio"]:checked::before {
     content: "✓";
     display: inline-block;
@@ -183,4 +195,3 @@ input[type="radio"]::after {
     font-weight: bold;
 }
 
-  

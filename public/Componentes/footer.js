@@ -1,3 +1,5 @@
+
+// rodape componetizado
 class footer extends HTMLElement {
       constructor() {
         super();

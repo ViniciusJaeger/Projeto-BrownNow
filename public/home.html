@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes importadas -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/home.css">
-    <script src="Componentes/navbar.js"></script>
-    <script src="Componentes/footer.js"></script>
     <title>BrownNow</title>
 </head>
 <body>
+    <!-- Navbar componetizada -->
     <navbar-1></navbar-1>
 
-    
+    <!-- Section com conteudo principal -->
     <section>
-        
+
+
+    <!-- Carrossel interativo(com 3 imagens) -->
         <div class="carrossel">
                     <img src="images/Pascoa.png" alt="imagem 1" class="carrossel-img active">
                     <img src="images/Pascoa2.png" alt="imagem 2" class="carrossel-img">
@@ -25,6 +27,7 @@
                     <div class="carrossel-seta left">&#10094;</div>
                     <div class="carrossel-seta right">&#10095;</div>
             </div>
+        <!-- Imagens em forma circular e com efeito zoom hover -->
         <div class="promocoes">
             <div class="imagemp">
                 <a href="produtos.html"><img src="images/brownie3.png" alt=""></a>
@@ -33,6 +36,8 @@
                 <a href="produtos.html"><img src="images/brownie6.png" alt=""></a>
             </div>
         </div>
+
+        <!-- Produtos com link para pagina produto -->
         <div class="produtos">
             <a href="produtos.html"><div class="produtos1"><img src="images/brownie11.png" alt=""></div></a>
             <a href="produtos.html"><div class="produtos2"><img src="images/brownie12.png" alt=""></div></a>
@@ -45,15 +50,16 @@
             
         </div>
 
+        <!-- Rodape componetizado -->
         <footer-1></footer-1>
     </section>
     
 
-
-
-     
+    <!-- Respectivos arquivos js (Carrosel e componentes)-->
+    <script src="Componentes/navbar.js"></script>
+    <script src="Componentes/footer.js"></script>
     <script src="js/carrosel.js"></script>
-    <script src="js/carrinho.js"></script>
+ 
 
 </body>
 </html>

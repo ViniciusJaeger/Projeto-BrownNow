@@ -1,5 +1,7 @@
-var cartItems = [];
+// funcao geral para produtos\carrinho
 
+var cartItems = [];
+// Faz o popup aparecer na tela
 function showPopup(name, price, ingredients) {
   document.getElementById('popup-name').innerText = name;
   document.getElementById('popup-price').innerText = 'Preço: ' + price;
@@ -8,17 +10,17 @@ function showPopup(name, price, ingredients) {
   document.getElementById('popup-overlay').style.display = 'block';
   document.getElementById('popup-content').style.display = 'block';
 }
-
+//  Executa a funcao fechar do popup
 function hidePopup() {
   document.getElementById('popup-overlay').style.display = 'none';
   document.getElementById('popup-content').style.display = 'none';
 }
-
+//  adiciona itens ao carrinho
 function addToCart(name, price) {
   var existingItem = cartItems.find(function(item) {
     return item.name === name;
   });
-
+// Condicao que proibe adicionar o mesmo item mais de uma vez ao carrinho
   if (existingItem) {
     document.getElementById('alert').innerText = 'Este item já foi adicionado ao carrinho.';
     document.getElementById('alert').style.display = 'block';
@@ -31,20 +33,21 @@ function addToCart(name, price) {
     cartItems.push(newItem);
     document.getElementById('alert').style.display = 'none';
   }
-
+// executa a funcao
   updateCart();
 }
-
+// remove o item do carrinho
 function removeItem(index) {
   cartItems.splice(index, 1);
   updateCart();
 }
-
+// adiciona o item a mais, ja add no carrinho
 function updateQuantity(index, quantity) {
   cartItems[index].quantity = quantity;
   updateCart();
 }
 
+// item que é add ao carrinho
 function updateCart() {
   var cartElement = document.getElementById('cart-items');
   cartElement.innerHTML = '';
@@ -71,6 +74,8 @@ function updateCart() {
       updateQuantity(index, parseInt(inputElement.value));
     };
 
+
+// botao que add o item do carrinho
     var addButton = document.createElement('button');
     addButton.innerText = '+';
     addButton.classList.add('add-remove-button');
@@ -79,6 +84,8 @@ function updateCart() {
       updateQuantity(index, parseInt(inputElement.value));
     };
 
+
+// funcao que adiciona o item ao carrinho
     var removeButton = document.createElement('button');
     removeButton.innerText = '-';
     removeButton.classList.add('add-remove-button');
@@ -108,6 +115,8 @@ function updateCart() {
     cartElement.appendChild(itemElement);
   });
 
+
+//  funcao que exibe o preco total de itens na tela
   var totalElement = document.querySelector('.total');
   var total = cartItems.reduce(function(sum, item) {
     return sum + item.price * item.quantity;
@@ -115,7 +124,7 @@ function updateCart() {
   totalElement.innerText = 'Total: $' + total;
 }
 
-
+// botao de finalizar compra
 function showPaymentPopup() {
   document.getElementById('payment-popup').style.display = 'block';
 }
@@ -132,5 +141,4 @@ function generateBoleto() {
 }
 
 function payWithCard() {
-  // Lógica para pagar com cartão de crédito
 }

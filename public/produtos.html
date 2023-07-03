@@ -9,23 +9,21 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/produtos.css">
+    <!-- fontes importadas -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <script src="/public/js/produtos.js"></script>
-    <script src="Componentes/navbar.js"></script>
-    <script src="Componentes/footer.js"></script>
     <title>BrownNow</title>
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/produtos.css">
+
 </head>
 
 <body>
     <navbar-1></navbar-1>
     <section>
      
-
+<!-- div que engloba todos os produtos -->
         <div class="products">
+          <!-- layout dos produtos -->
           <div class="product">
             <img src="images/browniehd.jpg" alt="Product 1">
             <div class="name">Brownie de <br>Castanha</div>
@@ -113,6 +111,8 @@
         </div>
       </div>
 
+
+<!-- estrutura do carrinho -->
       <div class="cart">
         <h2>Carrinho</h2>
         <div id="cart-items"></div>
@@ -120,6 +120,7 @@
         <button onclick=" showPaymentPopup()">Finalizar Compra</button>
       </div>
     
+      <!-- estrutura do botao 'detalhes' -->
       <div class="popup-overlay" id="popup-overlay"></div>
       <div class="popup-content" id="popup-content">
     <h2 id="popup-name"></h2>
@@ -128,8 +129,10 @@
     <button onclick="hidePopup()">Fechar</button>
       </div>
 
+      <!-- alerta que diz que o item ja foi add no carrinho -->
       <div class="alert" id="alert"></div>
 
+      <!-- estrutura do finalizar compra -->
       <div class="payment-popup align" id="payment-popup">
         <div class="center">
         <h2>Opções de Pagamento</h2>
@@ -148,9 +151,9 @@
         
        
         
-        <script src="js/produtosfilter.js"></script>
-        <script src="js/produtos.js" async></script>
-        <script src="js/carrinho.js"></script>
+        <script src="js/produtos.js"></script>
+       <script src="Componentes/navbar.js"></script>
+        <script src="Componentes/footer.js"></script>
 </body>
 
 </html>

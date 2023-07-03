@@ -13,12 +13,14 @@ body {
 
 }
 
+/* define o container que abrange todos os products */
 .products{
   margin-top: 30px;
   margin-left: 90px;
   margin-bottom: 30px;
 }
 
+/* layout dos produtos */
 .product {
   border: 1px solid gray;
   background-color: #fff;
@@ -48,6 +50,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* css do carrinho */
 .cart {
   width: 400px;
   border: 1px solid #ccc;
@@ -91,12 +94,14 @@ body {
   margin-top: 10px;
 }
 
+/* css do alerta */
 .alert {
   display: none;
   margin-bottom: 10px;
   color: red;
 }
 
+/* css do respectivo popup */
 .popup-overlay {
   display: none;
   position: fixed;
@@ -108,16 +113,6 @@ body {
   z-index: 9999;
 }
 
-.popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-}
 
 .popup-content {
   display: none;
@@ -155,11 +150,6 @@ body {
   background-color: #45a049;
 }
 
-.alert {
-  display: none;
-  margin-bottom: 10px;
-  color: red;
-}
 
 button{
   cursor: pointer;
@@ -207,54 +197,6 @@ button{
 .payment-popup button:hover {
   background-color: #45a049;
 }
-
-
-
-/* Alterações no seletor  */
-
-
-.produtosall{
-    width: 300px;
-    margin-top: 30px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-.selection{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-
-
-
-#filter-select{
-    padding: 12px;
-    font-size: 14px;
-    text-align: center;
-    border: 1px solid #000;
-    border-radius: 30px;
-  
-}
-
-.buttons {
-    margin-top: 20px;
-  }
-
-  .buy-button, .cart-button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-
-
-
 
 
 

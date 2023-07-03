@@ -1,3 +1,5 @@
+// aba de navegacao componetizado
+
 class Header extends HTMLElement {
      constructor() {
       super();
