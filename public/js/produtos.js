@@ -121,7 +121,7 @@ function updateCart() {
   var total = cartItems.reduce(function(sum, item) {
     return sum + item.price * item.quantity;
   }, 0);
-  totalElement.innerText = 'Total: $' + total;
+  totalElement.innerText = 'Total: R$' + total;
 }
 
 // botao de finalizar compra
