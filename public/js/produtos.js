@@ -1,5 +1,4 @@
-// funcao geral para produtos\carrinho
-
+// Guarda os elementos no carrinho
 var cartItems = [];
 // Faz o popup aparecer na tela
 function showPopup(name, price, ingredients) {
@@ -20,10 +19,23 @@ function addToCart(name, price) {
   var existingItem = cartItems.find(function(item) {
     return item.name === name;
   });
-// Condicao que proibe adicionar o mesmo item mais de uma vez ao carrinho
+
+  // Popup element
+  var popupElement = document.getElementById('cart-popup');
+
+  // Se o item já foi
   if (existingItem) {
-    document.getElementById('alert').innerText = 'Este item já foi adicionado ao carrinho.';
-    document.getElementById('alert').style.display = 'block';
+    var confirmAddToCart = confirm('Este item já foi adicionado ao carrinho. Deseja ir ao carrinho?');
+
+    if (confirmAddToCart) {
+      // Redirect the user to the cart on the same page
+      window.location.hash = 'carrinho'; // Assuming the cart element has an ID of 'cart'
+    } else {
+      popupElement.style.display = 'block';
+      setTimeout(function() {
+        popupElement.style.display = 'none';
+      }, 2000);
+    }
   } else {
     var newItem = {
       name: name,
@@ -32,10 +44,21 @@ function addToCart(name, price) {
     };
     cartItems.push(newItem);
     document.getElementById('alert').style.display = 'none';
+    showAddedToCartMessage(); // Call the function to display the message
   }
-// executa a funcao
+  // Execute the function
   updateCart();
 }
+
+// Function to show the "Item added to the cart" message
+function showAddedToCartMessage() {
+  var messageElement = document.getElementById('cart-message');
+  messageElement.style.display = 'block';
+  setTimeout(function() {
+    messageElement.style.display = 'none';
+  }, 2000);
+}
+
 // remove o item do carrinho
 function removeItem(index) {
   cartItems.splice(index, 1);
@@ -57,7 +80,7 @@ function updateCart() {
     itemElement.classList.add('item');
 
     var imgElement = document.createElement('img');
-    imgElement.src = 'product' + (index + 1) + '.jpg';
+    imgElement.src = 'image' + (index + 1) + '.png';
 
     var infoElement = document.createElement('div');
     infoElement.classList.add('info');
@@ -106,7 +129,6 @@ function updateCart() {
     quantityElement.appendChild(removeButton);
     quantityElement.appendChild(inputElement);
     quantityElement.appendChild(addButton);
-
     itemElement.appendChild(imgElement);
     itemElement.appendChild(infoElement);
     itemElement.appendChild(quantityElement);

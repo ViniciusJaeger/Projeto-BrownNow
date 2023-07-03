@@ -29,7 +29,7 @@
             <div class="name">Brownie de <br>Castanha</div>
             <div class="price">R$15.00</div>
             <button onclick="showPopup('Brownie de Castanha', 'R$15.00', 'Manteiga sem sal, Chocolate meio-amargo, Ovos, Açúcar mascavo, Farinha de trigo, Sal, Castanhas picadas')">Detalhes</button>
-            <button onclick="addToCart('Brownie de Castanha', 15.00 )">Adicionar ao Carrinho</button>
+            <button onclick="addToCart('Brownie de Castanha', 15.00, 'images/browniehd.jpg')">Adicionar ao Carrinho</button>
           </div>
           <div class="product">
             <img src="images/brownie2.png" alt="Product 2">
@@ -96,7 +96,7 @@
           <button onclick="addToCart('Brownie de Frutas Silvestres', 25.00)">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
-          <img src="images/brownie11.png" alt="Product 11">
+          <img src="images/brownie11.png" alt="Product 11" class="image">
           <div class="name">Brownie de Frutas <br>vermelhas</div>
           <div class="price">R$25.00</div>
           <button onclick="showPopup('Brownie de Frutas vermelhas', 'R$25.00', ' Ovos, Manteiga, Cacau em pó, Açúcar, fermento, sal, amendoim, Chocolate meio amargo, Frutas vermelhas')">Detalhes</button>
@@ -113,24 +113,33 @@
 
 
 <!-- estrutura do carrinho -->
-      <div class="cart">
+      <div id="carrinho" class="cart">
         <h2>Carrinho</h2>
         <div id="cart-items"></div>
         <div class="total">Total: R$0</div>
-        <button onclick=" showPaymentPopup()">Finalizar Compra</button>
+        <button onclick=" showPaymentPopup()"  class="finalizar">Finalizar Compra</button>
       </div>
     
       <!-- estrutura do botao 'detalhes' -->
       <div class="popup-overlay" id="popup-overlay"></div>
       <div class="popup-content" id="popup-content">
-    <h2 id="popup-name"></h2>
-    <div id="popup-price"></div>
-    <p id="popup-ingredients"></p>
-    <button onclick="hidePopup()">Fechar</button>
+      <h2 id="popup-name"></h2>
+      <div id="popup-price"></div>
+      <p id="popup-ingredients"></p>
+      <button onclick="hidePopup()">Fechar</button>
       </div>
 
       <!-- alerta que diz que o item ja foi add no carrinho -->
       <div class="alert" id="alert"></div>
+
+      <div id="cart-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f9f9f9; border: 1px solid #ccc; padding: 10px; z-index: 9999;">
+        Este item já foi adicionado ao carrinho.
+        <br>
+        <button onclick="window.location.href='#carrinho'" style="margin-top: 10px;">Ver Carrinho</button>
+      </div>
+      
+      <!-- Adicione uma âncora (link) para o elemento carrinho -->
+      <a id="carrinho"></a>
 
       <!-- estrutura do finalizar compra -->
       <div class="payment-popup align" id="payment-popup">
@@ -142,6 +151,8 @@
         <button onclick="closePaymentPopup()">Fechar</button>
       </div>
       </div>
+
+      <div id="cart-message" class="message">Item adicionado ao carrinho!</div>
 
       
     
