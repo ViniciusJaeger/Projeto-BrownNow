@@ -66,15 +66,12 @@ body{
 .produtos1{
     width: 300px;
     height: 300px;
-
-    border-radius: 15px;
-    
+    border-radius: 15px; 
 }
 
 .produtos2{
     width: 300px;
     height: 300px;
-
     border-radius: 15px;
   
 }
@@ -82,7 +79,6 @@ body{
 .produtos3{
     width: 300px;
     height: 300px;
-
     border-radius: 15px;
     
 }
@@ -90,7 +86,7 @@ body{
 .produtos img{
     height: 98%;
     width: 98%;
-    border: 2px solid black;
+    border-radius: 25px;
 }
 
 /* Promoções com efeito zoom hover */
