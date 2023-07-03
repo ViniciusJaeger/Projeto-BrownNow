@@ -279,5 +279,15 @@ h6 span{
 	display: block;
 }
 
+.termos2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.termos{
+  margin-right: 10px;
+}
+
 
 
