@@ -1,5 +1,3 @@
-const login_model = new model("auth", login)
-module.exports = login_model
 const express = require('express')
 const body_parser = require('body-parser')
 const app = express()
@@ -18,9 +16,6 @@ app.use(body_parser.urlencoded({extended:true}))
 app.get('/teste', (req, res) => {console.log('teste')
   res.send('Hello World!')
 })
-app.post ("/cadastro", (req, res)=>{
-    // console.log(req.body); fazer o cadastro
- })
 
 
 

@@ -107,7 +107,7 @@ class footer extends HTMLElement {
                 <h1>Contato:</h1>
             </div>
             <div class="text2">
-                <strong><p>0800-80909</p></strong>
+             <strong><p>0800-80909</p></strong>
             </div>
             </div>
            
