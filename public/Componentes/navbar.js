@@ -1,10 +1,10 @@
 class Header extends HTMLElement {
-      constructor() {
-        super();
-      }
+     constructor() {
+      super();
+     }
     
-      connectedCallback() {
-        this.innerHTML = `
+     connectedCallback() {
+      this.innerHTML = `
     <style>
     .navbar{
         background-color: #3D2F2B;
@@ -106,19 +106,6 @@ class Header extends HTMLElement {
         overflow: cover;
     }
     
-    .car{
-        height: 45px;
-        width: 50px;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        
-    }
-    
-    .car img{
-        height: 30px;
-        overflow: cover;
-    }
     
     .menu .options ul, .menu .options li{
         display: flex;
@@ -165,10 +152,7 @@ class Header extends HTMLElement {
             </a>
         </div>
         
-        <div class="car" >
-           <img src="images/carrinho-de-compras-removebg-preview.png"  id="botao-abrir-carrinho" alt=""> 
-        </div>      
-        </div>
+
 
         
         

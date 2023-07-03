@@ -11,78 +11,75 @@
     <title>BrowNow</title>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo-pesquisa">
-                <div class="logo">
-                    <img src="images/logo.png" alt="">
-                </div>
-                <div class="pontos">
-                    <h1>Total de PONTOS</h1>
-                    <SPAn>10000</SPAn>
-                </div>
-            </div>
-        </div>
-    </header> 
-
     <section>
-        <div class="titulo">
-            <h1>ESCOLHA A INSTITUIÇÃO PARA DOAR:</h1>
-        </div>
-        <div class="container">
-        
-            <div class="donate1">
-                <div class="imagem">
-                <img src="images/Design sem nome.png" alt="">
-                </div>
-                <div class="title_select">
-                    <div class="title">
-                        <h1>Lar Abdon Baptista</h1>
+        <header>
+            <div class="navbar">
+                <div class="logo-pesquisa">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
                     </div>
-                    <div class="select">
-                    <label for="">Selecionar </label>
-                        <input type="radio" name="option" id="opcao1" checked>
-                   
+                    <div class="pontos">
+                        <h1>Total de PONTOS</h1>
+                        <span>10000</span>
                     </div>
                 </div>
             </div>
-            <div class="donate1">
-                <div class="imagem">
-                <img src="images/LarEmanuel.png" alt="">
-                </div>
-                <div class="title_select">
-                    <div class="title">
-                        <h1>Casa Lar Emanuel</h1>
-                    </div>
-                    <div class="select">
-                    <label for="">Selecionar </label>
-                        <input type="radio" name="option" id="opcao1">
-                   
-                    </div>
-                </div>
+        </header> 
+    
+        <section>
+            <div class="titulo">
+                <h1>ESCOLHA A INSTITUIÇÃO PARA DOAR:</h1>
             </div>
-            <div class="donate2">
-                <div class="imagem">
-                    <img src="images/Ecos.png" alt="">
+            <div class="container">
+                <div class="donate">
+                    <div class="imagem">
+                        <img src="images/Design sem nome.png" alt="">
+                    </div>
+                    <div class="title_select">
+                        <div class="title">
+                            <h1>Lar Abdon Baptista</h1>
+                        </div>
+                        <div class="select">
+                            <label for="opcao1">Selecionar</label>
+                            <input type="radio" name="option" id="opcao1" checked>
+                        </div>
+                    </div>
+                </div>
+                <div class="donate">
+                    <div class="imagem">
+                        <img src="images/LarEmanuel.png" alt="">
+                    </div>
+                    <div class="title_select">
+                        <div class="title">
+                            <h1>Casa Lar Emanuel</h1>
+                        </div>
+                        <div class="select">
+                            <label for="opcao2">Selecionar</label>
+                            <input type="radio" name="option" id="opcao2">
+                        </div>
+                    </div>
+                </div>
+                <div class="donate">
+                    <div class="imagem">
+                        <img src="images/Ecos.png" alt="">
                     </div>
                     <div class="title_select">
                         <div class="title">
                             <h1>Associação Ecos da Esperança</h1>
                         </div>
                         <div class="select">
-                        <label for="">Selecionar </label>
-                            <input type="radio" name="option" id="opcao1">
+                            <label for="opcao3">Selecionar</label>
+                            <input type="radio" name="option" id="opcao3">
                         </div>
                     </div>
+                </div>
+                <div class="pagamento"> 
+                    <a href="" class="button" type="submit">Doar</a>
+                    <span>R$0,00</span>
+                </div>
             </div>
-            <div class="pagamento"> 
-            <a href="" class="button" type="submit">Doar</a>
-            <span>R$0,00</span>
-            </div>
-        </div>
-       
-     
-    </section>
-    <script src="donate.js"></script>
+        </section>
+    
+        <script src="donate.js"></script>
 </body>
 </html>

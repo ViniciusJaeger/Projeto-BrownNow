@@ -1,154 +1,136 @@
+var cartItems = [];
 
-function openPopup(product) {
-  var popup = document.getElementById("popup");
-  var popupName = document.getElementById("popup-name");
-  var popupPrice = document.getElementById("popup-price");
-  var popupDescription = document.getElementById("popup-description");
+function showPopup(name, price, ingredients) {
+  document.getElementById('popup-name').innerText = name;
+  document.getElementById('popup-price').innerText = 'Preço: ' + price;
+  document.getElementById('popup-ingredients').innerText = 'Ingredientes: ' + ingredients;
 
-  // Defina as informações detalhadas do produto selecionado
-  if (product === "produto1") {
-    popupName.textContent = "Brownie de Castanha";
-    popupPrice.textContent = "R$ 10,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong> Manteiga sem sal, Chocolate meio-amargo, Ovos, Açúcar mascavo, Farinha de trigo, Sal, Castanhas picadas ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  } else if (product === "produto2") {
-    popupName.textContent = "Brownie Gourmet Trufado";
-    popupPrice.textContent = "R$ 15,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong> Chocolate Meio Amargo NESTLÉ® DOIS FRADES® picado, Manteiga derretida, Açúcar, Ovos, Essência de baunilha, farinha de trigo,Cacau em Pó NESTLÉ® DOIS FRADES®,  sal,  Cobertura Chocolate Branco NESTLÉ® DOIS FRADES®, Chocolate Meio Amargo NESTLÉ® DOIS FRADES®, NESTLÉ®, Creme de Leite, MOÇA® ,Avelã";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  } else if (product === "produto3") {
-    popupName.textContent = "Brownie de Óreo Trufado";
-    popupPrice.textContent = "R$ 20,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Manteiga sem sal, Chocolate em tablete, Ovo, Chocolate em pó, Óreo, Açúcar mascavado, Farinha e  Sal. ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  } else if (product === "produto4") {
-    popupName.textContent = "Brownie de Amendoim Elegante";
-    popupPrice.textContent = "R$ 15,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Chocolate meio amargo, Manteiga, Ovo, Açúcar refinado,  Essência de baunilha, Farinha de trigo , Amendoim torrado sem sal e Amendoim torrado inteiro. ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto5") {
-    popupName.textContent = "Brownie de Amendoim Refinado";
-    popupPrice.textContent = "R$ 25,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Chocolate meio amargo, Manteiga, Ovo, Cacau em pó, Açúcar refinado, Farinha, doce de leite, sal, amendoim ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto6") {
-    popupName.textContent = "Brownie de Amendoim Clássico";
-    popupPrice.textContent = "R$ 20,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong> Ovos, Manteiga, Ovo, Cacau em pó, Açúcar, fermento, sal, amendoim, Chocolate meio amargo ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto7") {
-    popupName.textContent = "Brownie de Maracujá Gourmet";
-    popupPrice.textContent = "R$ 30,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Bicarbonato de sódio ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto8") {
-    popupName.textContent = "Brownie de Maracujá Maravilha";
-    popupPrice.textContent = "R$ 20,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Chocolate meio amargo, Coco ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto9") {
-    popupName.textContent = "Brownie de Maracujá Fresco";
-    popupPrice.textContent = "R$ 20,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Chocolate meio amargo, Leite Condensado, Chantilly ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto10") {
-    popupName.textContent = "Brownie de Frutas Silvestres";
-    popupPrice.textContent = "R$ 20,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Açúcar, Manteiga, Ovo,Frutas Silvestres Açúcar mascavo, Farinha, sal, Fermento, Chocolate meio amargo ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto11") {
-    popupName.textContent = "Brownie de Frutas Silvestres";
-    popupPrice.textContent = "R$ 25,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Ovos, Manteiga, Cacau em pó, Açúcar, fermento, sal, amendoim, Chocolate meio amargo, Frutas Silvestres ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
-  }else if (product === "produto12") {
-    popupName.textContent = "Brownie Red Velvet";
-    popupPrice.textContent = "R$ 30,00";
-    popupPrice.style.marginTop = '10px'
-    popupDescription.innerHTML = "<strong>Ingredientes:</strong>  Farinha de trigo sem fermento, Manteiga, Ovos, Cacau em pó, Açúcar refinado, fermento, sal, amendoim, Corante Vermelho, chocolate em barra ao leite ";
-    popupDescription.style.fontSize = '12px';
-    popupDescription.style.marginTop = '10px';
+  document.getElementById('popup-overlay').style.display = 'block';
+  document.getElementById('popup-content').style.display = 'block';
+}
+
+function hidePopup() {
+  document.getElementById('popup-overlay').style.display = 'none';
+  document.getElementById('popup-content').style.display = 'none';
+}
+
+function addToCart(name, price) {
+  var existingItem = cartItems.find(function(item) {
+    return item.name === name;
+  });
+
+  if (existingItem) {
+    document.getElementById('alert').innerText = 'Este item já foi adicionado ao carrinho.';
+    document.getElementById('alert').style.display = 'block';
+  } else {
+    var newItem = {
+      name: name,
+      price: price,
+      quantity: 1
+    };
+    cartItems.push(newItem);
+    document.getElementById('alert').style.display = 'none';
   }
 
+  updateCart();
+}
 
-    // Abra o pop-up
-    popup.style.visibility = "visible";
-    popup.style.opacity = 1;
+function removeItem(index) {
+  cartItems.splice(index, 1);
+  updateCart();
+}
 
-  }
+function updateQuantity(index, quantity) {
+  cartItems[index].quantity = quantity;
+  updateCart();
+}
 
-  function closePopup() {
-    var popup = document.getElementById("popup");
+function updateCart() {
+  var cartElement = document.getElementById('cart-items');
+  cartElement.innerHTML = '';
 
-    // Feche o pop-up
-    popup.style.visibility = "hidden";
-    popup.style.opacity = 0;
+  cartItems.forEach(function(item, index) {
+    var itemElement = document.createElement('div');
+    itemElement.classList.add('item');
 
-    }
+    var imgElement = document.createElement('img');
+    imgElement.src = 'product' + (index + 1) + '.jpg';
 
+    var infoElement = document.createElement('div');
+    infoElement.classList.add('info');
+    infoElement.innerHTML = '<div class="name">' + item.name + '</div>' +
+      '<div class="price">$' + item.price + '</div>';
+     
+    var quantityElement = document.createElement('div');
+    quantityElement.classList.add('quantity');
+    var inputElement = document.createElement('input');
+    inputElement.type = 'number';
+    inputElement.value = item.quantity;
+    inputElement.min = '1';
+    inputElement.onchange = function() {
+      updateQuantity(index, parseInt(inputElement.value));
+    };
 
+    var addButton = document.createElement('button');
+    addButton.innerText = '+';
+    addButton.classList.add('add-remove-button');
+    addButton.onclick = function() {
+      inputElement.value = parseInt(inputElement.value) + 1;
+      updateQuantity(index, parseInt(inputElement.value));
+    };
 
-    function addToCart() {
-      let product = document.querySelector('.product');
-      let productName = product.querySelector('.product-name').innerHTML;
-      let productPrice = product.querySelector('.product-price').innerHTML;
-      let productImage = product.querySelector('.product-image').src;
-    
-
-      let item = document.createElement('li');
-      item.classList.add('cd-cart__product');
-      item.innerHTML = `
-        <div class="cd-cart__image">
-          <a href="#0">
-            <img src="${productImage}" alt="${productName}">
-          </a>
-        </div>
-        <div class="cd-cart__details">
-          <h3 class="truncate"><a href="#0">${productName}</a></h3>
-          <span class="cd-cart__price">${productPrice}</span>
-          <div class="cd-cart__actions">
-            <a href="#0" class="cd-cart__delete-item">Delete</a>
-            <div class="cd-cart__quantity">
-              <label for="cd-product-productId">Qtd</label>
-              <span class="cd-cart__select">
-                <select class="reset" id="cd-product-productId" name="quantity">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <!-- ... -->
-                </select>
-                <svg class="icon" viewBox="0 0 12 12"></svg>
-              </span>
-            </div>
-          </div>
-        </div>
-      `;
-
-        // Add the item to the cart
-        let cart = document.querySelector('#carrinho .cd-cart__body ul');
-        cart.appendChild(item);
-      
-        // Close the pop-up
-        closePopup();
+    var removeButton = document.createElement('button');
+    removeButton.innerText = '-';
+    removeButton.classList.add('add-remove-button');
+    removeButton.onclick = function() {
+      if (parseInt(inputElement.value) > 1) {
+        inputElement.value = parseInt(inputElement.value) - 1;
+        updateQuantity(index, parseInt(inputElement.value));
       }
+    };
+
+    var removeElement = document.createElement('span');
+    removeElement.classList.add('remove');
+    removeElement.innerHTML = '&#128465;';
+    removeElement.onclick = function() {
+      removeItem(index);
+    };
+
+    quantityElement.appendChild(removeButton);
+    quantityElement.appendChild(inputElement);
+    quantityElement.appendChild(addButton);
+
+    itemElement.appendChild(imgElement);
+    itemElement.appendChild(infoElement);
+    itemElement.appendChild(quantityElement);
+    itemElement.appendChild(removeElement);
+
+    cartElement.appendChild(itemElement);
+  });
+
+  var totalElement = document.querySelector('.total');
+  var total = cartItems.reduce(function(sum, item) {
+    return sum + item.price * item.quantity;
+  }, 0);
+  totalElement.innerText = 'Total: $' + total;
+}
+
+
+function showPaymentPopup() {
+  document.getElementById('payment-popup').style.display = 'block';
+}
+
+function closePaymentPopup() {
+  document.getElementById('payment-popup').style.display = 'none';
+}
+
+function generateQRCode() {
+ 
+}
+
+function generateBoleto() {
+}
+
+function payWithCard() {
+  // Lógica para pagar com cartão de crédito
+}

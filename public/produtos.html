@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <script src="/public/js/produtos.js"></script>
     <script src="Componentes/navbar.js"></script>
     <script src="Componentes/footer.js"></script>
     <title>BrownNow</title>
@@ -20,130 +21,136 @@
 </head>
 
 <body>
-   <navbar-1></navbar-1>
-    <section >
-        <div class="produtosall">
-      <div class="selection">
-      <select id="filter-select" onchange="filterProducts()">
-        <option value="all">Todos</option>
-        <option value="best-sellers">Mais vendidos</option>
-        <option value="lowest-price">Menor preço</option>
-        <option value="top-rated">Mais bem avaliados</option>
-        <option value="promotions">Promoções</option>
-      </select>
-    </div>
-    </div>
+    <navbar-1></navbar-1>
+    <section>
+     
 
-    <div class="container">
-
-        <div class="product" onclick="openPopup('produto1')" data-category="lowest-price">
-            <img class="product-image" src="images/browniehd.jpg" alt="Produto1">
-            <div class="product-name">Brownie de Castanha</div>
-            <div class="product-price">R$ 10,00</div>
+        <div class="products">
+          <div class="product">
+            <img src="images/browniehd.jpg" alt="Product 1">
+            <div class="name">Brownie de <br>Castanha</div>
+            <div class="price">R$15.00</div>
+            <button onclick="showPopup('Brownie de Castanha', 'R$15.00', 'Manteiga sem sal, Chocolate meio-amargo, Ovos, Açúcar mascavo, Farinha de trigo, Sal, Castanhas picadas')">Detalhes</button>
+            <button onclick="addToCart('Brownie de Castanha', 15.00 )">Adicionar ao Carrinho</button>
           </div>
-
-          <div class="product" onclick="openPopup('produto2')" data-category="best-sellers">
-            <img class="product-image" src="images/brownie2.png" alt="Produto 2">
-            <div class="product-name">Brownie Gourmet Trufado</div>
-            <div class="product-price">R$ 15,00</div>
+          <div class="product">
+            <img src="images/brownie2.png" alt="Product 2">
+            <div class="name">Brownie Gourmet <br>Trufado</div>
+            <div class="price">R$20.00</div>
+            <button onclick="showPopup('Brownie Gourmet Trufado', 'R$20.00', 'Chocolate Meio Amargo NESTLÉ® DOIS FRADES® picado, Manteiga derretida, Açúcar, Ovos, Essência de baunilha, farinha de trigo,Cacau em Pó NESTLÉ® DOIS FRADES®,  sal,  Cobertura Chocolate Branco NESTLÉ® DOIS FRADES®, Chocolate Meio Amargo NESTLÉ® DOIS FRADES®, NESTLÉ®, Creme de Leite, MOÇA® ,Avelã')">Detalhes</button>
+            <button onclick="addToCart('Brownie Gourmet Trufado', 20.00)">Adicionar ao Carrinho</button>
           </div>
         
-          <div class="product" onclick="openPopup('produto3')" data-category="top-rated">
-            <img class="product-image" src="images/brownie3.png" alt="Produto 3">
-            <div class="product-name">Brownie Oreo Trufado</div>
-            <div class="product-price">R$ 20,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto4')" data-category="promotions">
-            <img class="product-image" src="images/brownie4.png" alt="Produto 3">
-            <div class="product-name">Brownie Amendoim Elegante</div>
-            <div class="product-price">R$ 15,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto5')">
-            <img class="product-image" src="images/brownie5.png" alt="Produto 3">
-            <div class="product-name">Brownie Amendoim Refinado</div>
-            <div class="product-price">R$ 25,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto6')">
-            <img class="product-image" src="images/brownie6.png" alt="Produto 3">
-            <div class="product-name">Brownie Amendoim Clássico</div>
-            <div class="product-price">R$ 20,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto7')">
-            <img class="product-image" src="images/brownie8.png" alt="Produto 3">
-            <div class="product-name">Brownie de Maracujá Gourmet</div>
-            <div class="product-price">R$ 30,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto8')">
-            <img class="product-image" src="images/brownie7.png" alt="Produto 3">
-            <div class="product-name">Brownie de Maracujá Maravilha</div>
-            <div class="product-price">R$ 20,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto9')">
-            <img class="product-image" src="images/brownie9.png" alt="Produto 3">
-            <div class="product-name">Brownie de Maracujá Fresco</div>
-            <div class="product-price">R$ 20,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto10')">
-            <img class="product-image" src="images/brownie10.png" alt="Produto 3">
-            <div class="product-name">Brownie de Frutas Silvestres</div>
-            <div class="product-price">R$ 20,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto11')">
-            <img class="product-image" src="images/brownie11.png" alt="Produto 3">
-            <div class="product-name">Brownie de Amendoim com Frutas Vermelhas</div>
-            <div class="product-price">R$ 25,00</div>
-          </div>
-
-          <div class="product" onclick="openPopup('produto12')">
-            <img class="product-image" src="images/brownie12.png" alt="Produto 3">
-            <div class="product-name">Brownie Red Velvet</div>
-            <div class="product-price">R$ 30,00</div>
-          </div>
-        
-          <div class="popup" id="popup">
-            <div class="popup-content">
-              <span class="close" onclick="closePopup()">&times;</span>
-              <h2 id="popup-name"></h2>
-              <p id="popup-price"></p>
-              <p id="popup-description"></p>
-              <div class="buttons">
-                <button class="buy-button" onclick="goToPurchasePage()">Comprar</button>
-                <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
-              </div>
-            </div>
-          </div>
-
-      </div>
-
-          <script src="js/produtosfilter.js"></script>
-
-    </section>
-
-    <footer-1></footer-1>
-
-    <div id="carrinho" class="carrinho-fechado">
-      <div class="carrinho-conteudo">
-        <h2>Meu Carrinho</h2>
-        <div class="cd-cart__body">
-          <ul>
-           
-          </ul>
+        <div class="product">
+          <img src="images/brownie3.png" alt="Product 3">
+          <div class="name">Brownie de Óreo <br>Trufado</div>
+          <div class="price">R$20.00</div>
+          <button onclick="showPopup('Brownie de Óreo Trufado', 'R$20.00', 'Manteiga sem sal, Chocolate em tablete, Ovo, Chocolate em pó, Óreo, Açúcar mascavado, Farinha e  Sal.')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Óreo Trufado', 20.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie4.png" alt="Product 4">
+          <div class="name">Brownie de Amendoim Elegante</div>
+          <div class="price">R$15.00</div>
+          <button onclick="showPopup('Brownie de Amendoim Elegante', 'R$15.00', 'Chocolate meio amargo, Manteiga, Ovo, Açúcar refinado,  Essência de baunilha, Farinha de trigo , Amendoim torrado sem sal e Amendoim torrado inteiro. ')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Amendoim Elegante', 15.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie5.png" alt="Product 5">
+          <div class="name">Brownie de Amendoim Refinado</div>
+          <div class="price">R$10.00</div>
+          <button onclick="showPopup('Brownie de Amendoim Refinado', 'R$10.00', 'Chocolate meio amargo, Manteiga, Ovo, Cacau em pó, Açúcar refinado, Farinha, doce de leite, sal, amendoim ')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Amendoim Refinado', 10.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie6.png" alt="Product 6">
+          <div class="name">Brownie de Amendoim Clássico</div>
+          <div class="price">R$15.00</div>
+          <button onclick="showPopup('Brownie de Amendoim Clássico', 'R$15.00', 'Ovos, Manteiga, Ovo, Cacau em pó, Açúcar, fermento, sal, amendoim, Chocolate meio amargo')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Amendoim Clássico', 15.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie7.png" alt="Product 7">
+          <div class="name">Brownie de Maracujá Gourmet</div>
+          <div class="price">R$15.00</div>
+          <button onclick="showPopup('Brownie de Maracujá Gourmet', 'R$15.00', ' Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Bicarbonato de sódio ')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Maracujá Gourmet', 15.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie8.png" alt="Product 8">
+          <div class="name">Brownie de Maracujá Maravilha</div>
+          <div class="price">R$20.00</div>
+          <button onclick="showPopup('Brownie de Maracujá Maravilha', 'R$20.00', 'Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Chocolate meio amargo, Coco ')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Maracujá Maravilha', 20.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie9.png" alt="Product 9">
+          <div class="name">Brownie de Maracujá <br>Fresco</div>
+          <div class="price">R$15.00</div>
+          <button onclick="showPopup('Brownie de Maracujá Fresco', 'R$15.00', ' Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Chocolate meio amargo, Leite Condensado, Chantilly ')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Maracujá Fresco', 15.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie10.png" alt="Product 10">
+          <div class="name">Brownie de Frutas <br>Silvestres</div>
+          <div class="price">R$25.00</div>
+          <button onclick="showPopup('Brownie de Frutas Silvestres', 'R$25.00', 'Açúcar, Manteiga, Ovo,Frutas Silvestres Açúcar mascavo, Farinha, sal, Fermento, Chocolate meio amargo')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Frutas Silvestres', 25.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie11.png" alt="Product 11">
+          <div class="name">Brownie de Frutas <br>vermelhas</div>
+          <div class="price">R$25.00</div>
+          <button onclick="showPopup('Brownie de Frutas vermelhas', 'R$25.00', ' Ovos, Manteiga, Cacau em pó, Açúcar, fermento, sal, amendoim, Chocolate meio amargo, Frutas vermelhas')">Detalhes</button>
+          <button onclick="addToCart('Brownie de Frutas vermelhas', 25.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+          <img src="images/brownie12.png" alt="Product 12">
+          <div class="name">Brownie Red <br>Velvet </div>
+          <div class="price">R$25.00</div>
+          <button onclick="showPopup('Brownie Red Velvet','R$25.00', 'Farinha de trigo sem fermento, Manteiga, Ovos, Cacau em pó, Açúcar refinado, fermento, sal, amendoim, Corante Vermelho, chocolate em barra ao leite ')">Detalhes</button>
+          <button onclick="addToCart('Brownie Red Velvet', 25.00)">Adicionar ao Carrinho</button>
         </div>
       </div>
-      <div class="fechar-carrinho">
-        <span class="seta-esquerda">&rarr;</span>
+
+      <div class="cart">
+        <h2>Carrinho</h2>
+        <div id="cart-items"></div>
+        <div class="total">Total: $0</div>
+        <button onclick=" showPaymentPopup()">Finalizar Compra</button>
       </div>
-    </div>
-  <script src="js/produtos.js" async></script>
-<script src="js/carrinho.js"></script>
+    
+      <div class="popup-overlay" id="popup-overlay"></div>
+      <div class="popup-content" id="popup-content">
+    <h2 id="popup-name"></h2>
+    <div id="popup-price"></div>
+    <p id="popup-ingredients"></p>
+    <button onclick="hidePopup()">Fechar</button>
+      </div>
+
+      <div class="alert" id="alert"></div>
+
+      <div class="payment-popup align" id="payment-popup">
+        <div class="center">
+        <h2>Opções de Pagamento</h2>
+        <button onclick="generateQRCode()">Gerar QR Code PIX</button>
+        <button onclick="generateBoleto()">Gerar Boleto</button>
+        <button onclick="payWithCard()">Pagar com Cartão de Crédito</button>
+        <button onclick="closePaymentPopup()">Fechar</button>
+      </div>
+      </div>
+
+      
+    
+        
+        
+        <footer-1></footer-1>
+        
+       
+        
+        <script src="js/produtosfilter.js"></script>
+        <script src="js/produtos.js" async></script>
+        <script src="js/carrinho.js"></script>
 </body>
 
 </html>
