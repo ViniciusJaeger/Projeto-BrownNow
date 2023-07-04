@@ -25,17 +25,11 @@ function addToCart(name, price) {
 
   // Se o item já foi
   if (existingItem) {
-    var confirmAddToCart = confirm('Este item já foi adicionado ao carrinho. Deseja ir ao carrinho?');
-
-    if (confirmAddToCart) {
-      // Redirect the user to the cart on the same page
-      window.location.hash = 'carrinho'; // Assuming the cart element has an ID of 'cart'
-    } else {
       popupElement.style.display = 'block';
       setTimeout(function() {
         popupElement.style.display = 'none';
       }, 2000);
-    }
+    
   } else {
     var newItem = {
       name: name,
@@ -43,20 +37,19 @@ function addToCart(name, price) {
       quantity: 1
     };
     cartItems.push(newItem);
-    document.getElementById('alert').style.display = 'none';
-    showAddedToCartMessage(); // Call the function to display the message
+    showAddedToCartMessage();
   }
-  // Execute the function
+
+  // Executa a função
   updateCart();
 }
 
-// Function to show the "Item added to the cart" message
 function showAddedToCartMessage() {
   var messageElement = document.getElementById('cart-message');
   messageElement.style.display = 'block';
   setTimeout(function() {
     messageElement.style.display = 'none';
-  }, 2000);
+  }, 1000);
 }
 
 // remove o item do carrinho
@@ -98,7 +91,7 @@ function updateCart() {
     };
 
 
-// botao que add o item do carrinho
+// botao que adiciona mais itens
     var addButton = document.createElement('button');
     addButton.innerText = '+';
     addButton.classList.add('add-remove-button');
@@ -108,7 +101,7 @@ function updateCart() {
     };
 
 
-// funcao que adiciona o item ao carrinho
+// funcao que adiciona menos itens ao carrinho
     var removeButton = document.createElement('button');
     removeButton.innerText = '-';
     removeButton.classList.add('add-remove-button');
@@ -122,9 +115,13 @@ function updateCart() {
     var removeElement = document.createElement('span');
     removeElement.classList.add('remove');
     removeElement.innerHTML = '&#128465;';
-    removeElement.onclick = function() {
-      removeItem(index);
-    };
+    removeElement.onclick = function removeItem(index) {
+  cartItems.splice(index, 1);
+  updateCart();
+   if (cartItems.length === 0) {
+  document.querySelector('.finalizar').style.display = 'none';
+  }
+    }
 
     quantityElement.appendChild(removeButton);
     quantityElement.appendChild(inputElement);
@@ -135,6 +132,13 @@ function updateCart() {
     itemElement.appendChild(removeElement);
 
     cartElement.appendChild(itemElement);
+
+  
+    if (cartItems.length > 0) {
+      document.querySelector('.finalizar').style.display = 'block';
+    } else {
+      document.querySelector('.finalizar').style.display = 'none';
+    }
   });
 
 
@@ -155,12 +159,100 @@ function closePaymentPopup() {
   document.getElementById('payment-popup').style.display = 'none';
 }
 
-function generateQRCode() {
- 
+function generateQRCode(texto) {
+  // Cria um elemento <div> para o popup
+  var popupDiv = document.createElement("div");
+  popupDiv.style.position = "fixed";
+  popupDiv.style.top = "50%";
+  popupDiv.style.left = "50%";
+  popupDiv.style.transform = "translate(-50%, -50%)";
+  popupDiv.style.backgroundColor = "white";
+  popupDiv.style.padding = "20px";
+  popupDiv.style.border = "1px solid #ccc";
+  popupDiv.style.zIndex = "9999";
+  
+  // Cria um elemento <img> para o símbolo do Pix
+  var pixImg = document.createElement("img");
+  pixImg.src = "images/pix.png";
+  pixImg.style.display = "block";
+  pixImg.style.marginBottom = "10px";
+  pixImg.style.width = '100px'
+  pixImg.style.height = '100px'
+  pixImg.style.margin = 'auto'
+  pixImg.style.marginBottom = '10px'
+
+  
+  // Adiciona o elemento <img> ao elemento <div>
+  popupDiv.appendChild(pixImg);
+  
+  // Cria um elemento <img> para o QR Code
+  var qrCodeImg = document.createElement("img");
+  qrCodeImg.src = "https://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(texto);
+  qrCodeImg.style.display = "block";
+  qrCodeImg.style.marginBottom = "10px";
+  
+  // Adiciona o elemento <img> ao elemento <div>
+  popupDiv.appendChild(qrCodeImg);
+  
+  // Cria um botão para fechar o popup
+  var fecharBotao = document.createElement("button");
+  fecharBotao.innerHTML = "Fechar";
+  fecharBotao.style.padding = "5px 10px";
+  fecharBotao.style.backgroundColor = "#544541";
+  fecharBotao.style.border = "none";
+  fecharBotao.style.cursor = "pointer";
+  fecharBotao.style.color = '#fff'
+  fecharBotao.style.width = '100%'
+  fecharBotao.style.borderRadius = '10px'
+  fecharBotao.style.justifySelf = 'center'
+  
+  // Adiciona um evento de clique para fechar o popup
+  fecharBotao.addEventListener("click", function() {
+    document.body.removeChild(popupDiv);
+  });
+  
+  // Adiciona o botão ao elemento <div>
+  popupDiv.appendChild(fecharBotao);
+  
+  // Adiciona o elemento <div> ao body do documento
+  document.body.appendChild(popupDiv);
+
+  closePaymentPopup()
 }
+
+// Exemplo de uso
+var textoExemplo = "ChavePix: exemplo@chave.com";
+gerarQRCodePopup(textoExemplo);
 
 function generateBoleto() {
 }
 
-function payWithCard() {
+
+function gerarcard() {
+  var popupOverlay = document.querySelector(".popup-cardpay");
+  var popupContent = document.querySelector(".popup-content-card");
+
+  function openPopup() {
+    popupOverlay.style.display = "flex";
+  }
+
+  function closePopup() {
+    popupOverlay.style.display = "none";
+  }
+
+  openPopup();
+
+  popupOverlay.addEventListener("click", function(event) {
+    if (event.target === popupOverlay) {
+      closePopup();
+    }
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      closePopup();
+    }
+  });
+
+  closePaymentPopup()
 }

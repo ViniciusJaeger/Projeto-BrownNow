@@ -167,7 +167,6 @@ body {
   background-color: #544541;
 }
 
-
 button{
   cursor: pointer;
 }
@@ -228,4 +227,50 @@ button{
   z-index: 9999;
 }
 
+.item-add{
+  margin-top: 10px; 
+  text-align: center; 
+  background-color: #544541;
+  padding: 5px;
+  width: 100px;
+  border-radius: 20px;
+  justify-self: center;
+  color: #fff;
+  width: 100%;
+}
 
+.popup-cardpay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content-card {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.form-submit {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #544541;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

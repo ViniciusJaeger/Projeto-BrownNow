@@ -28,3 +28,6 @@ var rightArrow = document.getElementsByClassName("carrossel-seta right")[0]; // 
 leftArrow.addEventListener("click", function() { // Adiciona um ouvinte de evento de clique à seta esquerda
   showSlide(-1); // Chama a função showSlide passando -1 como argumento para retroceder para o slide anterior
 });
+rightArrow.addEventListener("click", function() { // Adiciona um ouvinte de evento de clique à seta esquerda
+  showSlide(+1); // Chama a função showSlide passando -1 como argumento para retroceder para o slide anterior
+});

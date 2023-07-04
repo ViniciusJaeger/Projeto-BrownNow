@@ -117,7 +117,7 @@
         <h2>Carrinho</h2>
         <div id="cart-items"></div>
         <div class="total">Total: R$0</div>
-        <button onclick=" showPaymentPopup()"  class="finalizar">Finalizar Compra</button>
+        <button onclick=" showPaymentPopup()"  class="finalizar" style="display: none ;">Finalizar Compra</button>
       </div>
     
       <!-- estrutura do botao 'detalhes' -->
@@ -129,30 +129,47 @@
       <button onclick="hidePopup()">Fechar</button>
       </div>
 
-      <!-- alerta que diz que o item ja foi add no carrinho -->
-      <div class="alert" id="alert"></div>
-
-      <div id="cart-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f9f9f9; border: 1px solid #ccc; padding: 10px; z-index: 9999;">
-        Este item já foi adicionado ao carrinho.
-        <br>
-        <button onclick="window.location.href='#carrinho'" style="margin-top: 10px;">Ver Carrinho</button>
-      </div>
-      
-      <!-- Adicione uma âncora (link) para o elemento carrinho -->
-      <a id="carrinho"></a>
-
       <!-- estrutura do finalizar compra -->
       <div class="payment-popup align" id="payment-popup">
         <div class="center">
         <h2>Opções de Pagamento</h2>
         <button onclick="generateQRCode()">Gerar QR Code PIX</button>
-        <button onclick="generateBoleto()">Gerar Boleto</button>
-        <button onclick="payWithCard()">Pagar com Cartão de Crédito</button>
+        <button onclick="gerarcard()">Pagar no cartão</button>
         <button onclick="closePaymentPopup()">Fechar</button>
       </div>
       </div>
 
       <div id="cart-message" class="message">Item adicionado ao carrinho!</div>
+
+      <div id="cart-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f9f9f9; border: 1px solid #ccc; padding: 10px; z-index: 9999;">
+        Este item já foi adicionado ao carrinho.
+        <br>
+        <button onclick="window.location.href='#carrinho'" class="item-add">Ver Carrinho</button>
+      </div>
+
+      <div class="popup-cardpay" style="display: none;">
+        <div class="popup-content-card card">
+          <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h1>Pagamento Cartão</h1>
+
+            <form>
+
+                <label for="numero_cartao" class="form-label">Número do Cartão:</label>
+                <input type="text" name="numero_cartao" id="numero_cartao" class="form-input" required><br><br>
+
+                <label for="nome_titular" class="form-label">Nome do Titular:</label>
+                <input type="text" name="nome_titular" id="nome_titular" class="form-input" required><br><br>
+
+                <label for="data_validade" class="form-label">Data de Validade:</label>
+                <input type="text" name="data_validade" id="data_validade" class="form-input" required><br><br>
+
+                <label for="codigo_seguranca" class="form-label">Código de Segurança:</label>
+                <input type="text" name="codigo_seguranca" id="codigo_seguranca" class="form-input" required><br><br>
+
+                <input type="submit" value="Pagar" class="form-submit">
+            </form>
+        </div>
+    </div>
 
       
     
