@@ -43,6 +43,12 @@ h6 span{
 .full-height{
   min-height: 100vh;
 }
+
+.checkbox{
+  position: absolute;
+  left: -999999;
+}
+
 .checkbox:checked + label,
 .checkbox:not(:checked) + label{
   position: relative;
@@ -78,6 +84,7 @@ h6 span{
 .checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
 }
+
 
 
 .card-3d-wrap {

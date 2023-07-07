@@ -139,19 +139,26 @@
       </div>
       </div>
 
+      <!-- Aviso que o item foi adicionado ao carrinho -->
       <div id="cart-message" class="message">Item adicionado ao carrinho!</div>
 
+      <!-- Aviso, avisando que há conflito -->
       <div id="cart-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f9f9f9; border: 1px solid #ccc; padding: 10px; z-index: 9999;">
         Este item já foi adicionado ao carrinho.
         <br>
+        <!-- direciona ao carrinho -->
         <button onclick="window.location.href='#carrinho'" class="item-add">Ver Carrinho</button>
       </div>
 
+
+
+  <!-- Pop up para pagamento -->
       <div class="popup-cardpay" style="display: none;">
         <div class="popup-content-card card">
           <span class="popup-close" onclick="closePopup()">&times;</span>
             <h1>Pagamento Cartão</h1>
 
+            <!-- Pop up para pagamento em cartão -->
             <form>
 
                 <label for="numero_cartao" class="form-label">Número do Cartão:</label>
