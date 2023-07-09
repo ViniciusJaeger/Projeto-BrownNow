@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body onload="AlertPopup()">
     <navbar-1></navbar-1>
     <section>
      
@@ -36,7 +36,7 @@
             <div class="name">Brownie Gourmet <br>Trufado</div>
             <div class="price">R$20.00</div>
             <button onclick="showPopup('Brownie Gourmet Trufado', 'R$20.00', 'Chocolate Meio Amargo NESTLÉ® DOIS FRADES® picado, Manteiga derretida, Açúcar, Ovos, Essência de baunilha, farinha de trigo,Cacau em Pó NESTLÉ® DOIS FRADES®,  sal,  Cobertura Chocolate Branco NESTLÉ® DOIS FRADES®, Chocolate Meio Amargo NESTLÉ® DOIS FRADES®, NESTLÉ®, Creme de Leite, MOÇA® ,Avelã')">Detalhes</button>
-            <button onclick="addToCart('Brownie Gourmet Trufado', 20.00)">Adicionar ao Carrinho</button>
+            <button onclick="addToCart('Brownie Gourmet Trufado', 20.00, 'images/brownie2.png' )">Adicionar ao Carrinho</button>
           </div>
         
         <div class="product">
@@ -44,70 +44,70 @@
           <div class="name">Brownie de Óreo <br>Trufado</div>
           <div class="price">R$20.00</div>
           <button onclick="showPopup('Brownie de Óreo Trufado', 'R$20.00', 'Manteiga sem sal, Chocolate em tablete, Ovo, Chocolate em pó, Óreo, Açúcar mascavado, Farinha e  Sal.')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Óreo Trufado', 20.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Óreo Trufado', 20.00, 'images/brownie3.png')">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie4.png" alt="Product 4">
           <div class="name">Brownie de Amendoim Elegante</div>
           <div class="price">R$15.00</div>
           <button onclick="showPopup('Brownie de Amendoim Elegante', 'R$15.00', 'Chocolate meio amargo, Manteiga, Ovo, Açúcar refinado,  Essência de baunilha, Farinha de trigo , Amendoim torrado sem sal e Amendoim torrado inteiro. ')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Amendoim Elegante', 15.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Amendoim Elegante', 15.00, 'images/brownie4.png' )">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie5.png" alt="Product 5">
           <div class="name">Brownie de Amendoim Refinado</div>
           <div class="price">R$10.00</div>
           <button onclick="showPopup('Brownie de Amendoim Refinado', 'R$10.00', 'Chocolate meio amargo, Manteiga, Ovo, Cacau em pó, Açúcar refinado, Farinha, doce de leite, sal, amendoim ')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Amendoim Refinado', 10.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Amendoim Refinado', 10.00, 'images/brownie5.png')">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie6.png" alt="Product 6">
           <div class="name">Brownie de Amendoim Clássico</div>
           <div class="price">R$15.00</div>
           <button onclick="showPopup('Brownie de Amendoim Clássico', 'R$15.00', 'Ovos, Manteiga, Ovo, Cacau em pó, Açúcar, fermento, sal, amendoim, Chocolate meio amargo')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Amendoim Clássico', 15.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Amendoim Clássico', 15.00, 'images/brownie6.png' )">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie7.png" alt="Product 7">
           <div class="name">Brownie de Maracujá Gourmet</div>
           <div class="price">R$15.00</div>
           <button onclick="showPopup('Brownie de Maracujá Gourmet', 'R$15.00', ' Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Bicarbonato de sódio ')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Maracujá Gourmet', 15.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Maracujá Gourmet', 15.00, 'images/brownie7.png' )">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie8.png" alt="Product 8">
           <div class="name">Brownie de Maracujá Maravilha</div>
           <div class="price">R$20.00</div>
           <button onclick="showPopup('Brownie de Maracujá Maravilha', 'R$20.00', 'Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Chocolate meio amargo, Coco ')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Maracujá Maravilha', 20.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Maracujá Maravilha', 20.00, 'images/brownie8.png')">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie9.png" alt="Product 9">
           <div class="name">Brownie de Maracujá <br>Fresco</div>
           <div class="price">R$15.00</div>
           <button onclick="showPopup('Brownie de Maracujá Fresco', 'R$15.00', ' Açúcar, Manteiga, Ovo, Polpa de maracujá, Açúcar, Farinha, Chocolate Branco, sal, Rum, Fermento, Chocolate meio amargo, Leite Condensado, Chantilly ')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Maracujá Fresco', 15.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Maracujá Fresco', 15.00, 'images/brownie9.png' )">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie10.png" alt="Product 10">
           <div class="name">Brownie de Frutas <br>Silvestres</div>
           <div class="price">R$25.00</div>
           <button onclick="showPopup('Brownie de Frutas Silvestres', 'R$25.00', 'Açúcar, Manteiga, Ovo,Frutas Silvestres Açúcar mascavo, Farinha, sal, Fermento, Chocolate meio amargo')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Frutas Silvestres', 25.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Frutas Silvestres', 25.00, 'images/brownie10.png')">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie11.png" alt="Product 11" class="image">
           <div class="name">Brownie de Frutas <br>vermelhas</div>
           <div class="price">R$25.00</div>
           <button onclick="showPopup('Brownie de Frutas vermelhas', 'R$25.00', ' Ovos, Manteiga, Cacau em pó, Açúcar, fermento, sal, amendoim, Chocolate meio amargo, Frutas vermelhas')">Detalhes</button>
-          <button onclick="addToCart('Brownie de Frutas vermelhas', 25.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie de Frutas vermelhas', 25.00, 'images/brownie11.png')">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
           <img src="images/brownie12.png" alt="Product 12">
           <div class="name">Brownie Red <br>Velvet </div>
           <div class="price">R$25.00</div>
           <button onclick="showPopup('Brownie Red Velvet','R$25.00', 'Farinha de trigo sem fermento, Manteiga, Ovos, Cacau em pó, Açúcar refinado, fermento, sal, amendoim, Corante Vermelho, chocolate em barra ao leite ')">Detalhes</button>
-          <button onclick="addToCart('Brownie Red Velvet', 25.00)">Adicionar ao Carrinho</button>
+          <button onclick="addToCart('Brownie Red Velvet', 25.00, 'images/brownie12.png')">Adicionar ao Carrinho</button>
         </div>
       </div>
 
@@ -177,6 +177,24 @@
             </form>
         </div>
     </div>
+
+  
+      <!-- Popup aviso-doação -->
+      <div class="popup-aviso" id="popup-aviso" style="display: none;">
+          <div class="popup-aviso-content" id="popup-aviso-content">
+              <h2>Como doar?</h2>
+             <strong> <p>Atenção para nossa politica de doação:</p></strong>
+              <ul>
+                <li>Você precisa realizar dez compras de qualquer produto no site</li>
+                <li>Quando você realizar essas dez compras, será encaminhado para uma página de doação </li>
+                <li>Nessa página você poderá escolher qual instuição parceira deseja realizar a doação</li>
+                <li>Nós doaremos o valor de um brownie (R$24.00) para essa instuição</li>
+                <li>Caso não queira doar, perderá o direito.</li>
+                <span>*A doação não é acumulativa</span>
+              </ul>
+              <span id="close-btn" class="close-btn">Fechar</span>
+          </div>
+      </div>
 
       
     

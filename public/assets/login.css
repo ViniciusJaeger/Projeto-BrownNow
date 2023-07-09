@@ -44,10 +44,12 @@ h6 span{
   min-height: 100vh;
 }
 
-.checkbox{
+[type="checkbox"]:checked#log-checkbox,
+[type="checkbox"]:not(:checked)#log-checkbox {
   position: absolute;
-  left: -999999;
+  left: -9999px;
 }
+
 
 .checkbox:checked + label,
 .checkbox:not(:checked) + label{

@@ -15,32 +15,31 @@ function hidePopup() {
   document.getElementById('popup-content').style.display = 'none';
 }
 //  adiciona itens ao carrinho
-function addToCart(name, price) {
+function addToCart(name, price, image) {
   var existingItem = cartItems.find(function(item) {
-    return item.name === name;
+      return item.name === name;
   });
 
   // Popup element
   var popupElement = document.getElementById('cart-popup');
 
-  // Se o item já foi
+  // Se o item já foi adicionado
   if (existingItem) {
       popupElement.style.display = 'block';
       setTimeout(function() {
-        popupElement.style.display = 'none';
+          popupElement.style.display = 'none';
       }, 2000);
-    
   } else {
-    var newItem = {
-      name: name,
-      price: price,
-      quantity: 1
-    };
-    cartItems.push(newItem);
-    showAddedToCartMessage();
+      var newItem = {
+          name: name,
+          price: price,
+          quantity: 1,
+          image: image
+      };
+      cartItems.push(newItem);
+      showAddedToCartMessage();
   }
 
-  // Executa a função
   updateCart();
 }
 
@@ -69,77 +68,93 @@ function updateCart() {
   cartElement.innerHTML = '';
 
   cartItems.forEach(function(item, index) {
-    var itemElement = document.createElement('div');
-    itemElement.classList.add('item');
+      var itemElement = document.createElement('div');
+      itemElement.classList.add('item');
 
-    var imgElement = document.createElement('img');
-    imgElement.src = 'image' + (index + 1) + '.png';
+      var imgElement = document.createElement('img');
+      imgElement.src = item.image;
 
-    var infoElement = document.createElement('div');
-    infoElement.classList.add('info');
-    infoElement.innerHTML = '<div class="name">' + item.name + '</div>' +
-      '<div class="price">$' + item.price + '</div>';
-     
-    var quantityElement = document.createElement('div');
-    quantityElement.classList.add('quantity');
-    var inputElement = document.createElement('input');
-    inputElement.type = 'number';
-    inputElement.value = item.quantity;
-    inputElement.min = '1';
-    inputElement.onchange = function() {
-      updateQuantity(index, parseInt(inputElement.value));
-    };
+      var infoElement = document.createElement('div');
+      infoElement.classList.add('info');
+      infoElement.innerHTML = '<div class="name">' + item.name + '</div>' +
+          '<div class="price">R$' + item.price + '</div>';
 
+      var quantityElement = document.createElement('div');
+      quantityElement.classList.add('quantity');
+      var inputElement = document.createElement('input');
+      inputElement.type = 'number';
+      inputElement.value = item.quantity;
+      inputElement.min = '1';
+      inputElement.onchange = function() {
+          updateQuantity(index, parseInt(inputElement.value));
+      };
 
-// botao que adiciona mais itens
-    var addButton = document.createElement('button');
-    addButton.innerText = '+';
-    addButton.classList.add('add-remove-button');
-    addButton.onclick = function() {
-      inputElement.value = parseInt(inputElement.value) + 1;
-      updateQuantity(index, parseInt(inputElement.value));
-    };
+      // Botão que adiciona mais itens
+      var addButton = document.createElement('button');
+      addButton.innerText = '+';
+      addButton.classList.add('add-remove-button');
+      addButton.onclick = function() {
+          inputElement.value = parseInt(inputElement.value) + 1;
+          updateQuantity(index, parseInt(inputElement.value));
+      };
 
+      // Função que remove itens do carrinho
+      var removeButton = document.createElement('button');
+      removeButton.innerText = '-';
+      removeButton.classList.add('add-remove-button');
+      removeButton.onclick = function() {
+          if (parseInt(inputElement.value) > 1) {
+              inputElement.value = parseInt(inputElement.value) - 1;
+              updateQuantity(index, parseInt(inputElement.value));
+          }
+      };
 
-// funcao que adiciona menos itens ao carrinho
-    var removeButton = document.createElement('button');
-    removeButton.innerText = '-';
-    removeButton.classList.add('add-remove-button');
-    removeButton.onclick = function() {
-      if (parseInt(inputElement.value) > 1) {
-        inputElement.value = parseInt(inputElement.value) - 1;
-        updateQuantity(index, parseInt(inputElement.value));
-      }
-    };
+      var removeElement = document.createElement('span');
+      removeElement.classList.add('remove');
+      removeElement.innerHTML = '&#128465;';
+      removeElement.onclick = function() {
+          removeItem(index);
+      };
 
-    var removeElement = document.createElement('span');
-    removeElement.classList.add('remove');
-    removeElement.innerHTML = '&#128465;';
-    removeElement.onclick = function removeItem(index) {
+      quantityElement.appendChild(removeButton);
+      quantityElement.appendChild(inputElement);
+      quantityElement.appendChild(addButton);
+      itemElement.appendChild(imgElement);
+      itemElement.appendChild(infoElement);
+      itemElement.appendChild(quantityElement);
+      itemElement.appendChild(removeElement);
+
+      cartElement.appendChild(itemElement);
+  });
+
+  if (cartItems.length > 0) {
+      document.querySelector('.finalizar').style.display = 'block';
+  } else {
+      document.querySelector('.finalizar').style.display = 'none';
+  }
+}
+
+// Função para atualizar a quantidade do item no carrinho
+function updateQuantity(index, quantity) {
+  cartItems[index].quantity = quantity;
+  updateCart();
+}
+
+// Função para remover um item do carrinho
+function removeItem(index) {
   cartItems.splice(index, 1);
   updateCart();
-   if (cartItems.length === 0) {
-  document.querySelector('.finalizar').style.display = 'none';
-  }
-    }
+}
 
-    quantityElement.appendChild(removeButton);
-    quantityElement.appendChild(inputElement);
-    quantityElement.appendChild(addButton);
-    itemElement.appendChild(imgElement);
-    itemElement.appendChild(infoElement);
-    itemElement.appendChild(quantityElement);
-    itemElement.appendChild(removeElement);
+// Função para exibir mensagem de item adicionado ao carrinho
+function showAddedToCartMessage() {
+  var cartMessage = document.getElementById('cart-message');
+  cartMessage.style.display = 'block';
+  setTimeout(function() {
+      cartMessage.style.display = 'none';
+  }, 2000);
+}
 
-    cartElement.appendChild(itemElement);
-
-  
-    if (cartItems.length > 0) {
-      document.querySelector('.finalizar').style.display = 'block';
-    } else {
-      document.querySelector('.finalizar').style.display = 'none';
-    }
-  });
 
 
 //  funcao que exibe o preco total de itens na tela
@@ -148,7 +163,7 @@ function updateCart() {
     return sum + item.price * item.quantity;
   }, 0);
   totalElement.innerText = 'Total: R$' + total;
-}
+
 
 // botao de finalizar compra
 function showPaymentPopup() {
@@ -227,7 +242,7 @@ gerarQRCodePopup(textoExemplo);
 function generateBoleto() {
 }
 
-
+// popup para pagamento
 function gerarcard() {
   var popupOverlay = document.querySelector(".popup-cardpay");
   var popupContent = document.querySelector(".popup-content-card");
@@ -255,4 +270,37 @@ function gerarcard() {
   });
 
   closePaymentPopup()
+}
+
+  // Função para exibir o popup ao carregar a página
+  window.onload = function() {
+    showPopup();
+};
+
+// Função para exibir o popup
+function AlertPopup() {
+    var popupAviso = document.getElementById('popup-aviso');
+    var popupAvisoContent = document.getElementById('popup-aviso-content');
+    var closeBtn = document.getElementById('close-btn');
+
+    popupAviso.style.display = 'block';
+    popupAvisoContent.style.display = 'block';
+
+    // Fechar o popup ao clicar no botão "Fechar"
+    closeBtn.onclick = function() {
+        popupAviso.style.display = 'none';
+        popupAvisoContent.style.display = 'none';
+    };
+
+    // Fechar o popup ao clicar fora dele
+    window.onclick = function(event) {
+        if (event.target == popupAviso) {
+            popupAviso.style.display = 'none';
+            popupAvisoContent.style.display = 'none';
+        }
+
+        window.onload = function() {
+          AlertPopup();
+      };
+    };
 }
